@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>String (내장객체)</title>
+<script type="text/javascript">
+ // 내장 객체 : javascript가 구동되는 시점에서 바로 제공되면,
+ //           javascript코드 어디에서든 사용이 가능한다.
+ // Object, String, Number, Date, Array, Math, ....
+ 	var str1 = "Hello";
+ 	var str2 = new String("WelCome");
+ 	
+ 	document.write("str1 = " + str1 + "<br>");
+ 	document.write("str2 = " + str2 + "<br>");
+ 	
+ 	// 길이 : length
+ 	document.write("str1 길이 = " + str1.length + "<br>");
+ 	document.write("str2 길이 = " + str2.length + "<br>");
+ 	
+ 	// n번째 문자 추출  : charAt(n)  * n = index = 0 부터시작
+ 	document.write("str1의 2번째글자 = " + str1.charAt(1) + "<br>");
+ 	document.write("str2의 4번째글자  = " + str2.charAt(3) + "<br>");
+ 	
+ 	// 문자연결자 : concat(str)
+ 	document.write(str1.concat(" World ~") + "<br>");
+ 	document.write(str1.concat(str2) + "<br>");
+ 	
+ 	// 해당 문자나 문자열의 위치값 : indexOf('문자 또는 문자열')
+ 	//                         **정규식을 사용 못함, -1 이면 찾는 문자가 없다.
+ 	document.write(str1.indexOf('C')+"<br>");
+ 	document.write(str2.indexOf('C')+"<br>");
+ 	
+	// 해당 문자나 문자열의 위치값 : indexOf('문자 또는 문자열', 시작위치)
+	// 첫번째 e 의 위치
+	document.write(str2+"<br>");
+	document.write(str2.indexOf('e',0)+"<br>");
+ 	// 두번째 e의 위치
+	document.write(str2.indexOf('e',str2.indexOf('e')+1)+"<br>");
+	// 해당 문자나 문자열의 마지막 위치값 : lastIndexOf('문자 또는 문자열')
+	document.write(str2.lastIndexOf('e')+"<br>");
+ 	
+	// 해당 문자나 문자열의 위치값 : search('문자 또는 문자열')
+	//                         정규식 사용가능, 두번째 인자는 없다.
+	document.write(str2.search('e')+"<br>");
+ 	
+ 	// 원하는 문자열 추출 : slice, substring,  substr
+ 	// slice(begin, end),  substring(begin,end) : *end는 포함하지 않는다.
+ 	// substr(begin, 갯수)
+ 	str1 = "Apple, Banana, Kiwi";
+ 	document.write(str1.slice(7,13)+"<br>");
+ 	document.write(str1.substring(7,13)+"<br>");
+ 	document.write(str1.substr(7,6)+"<br>");
+ 	
+ 	// 치환 : replace(old, new) (원본은 변경되지 않는다. 사본이 만들어진다.)
+ 	var str3 = str1.replace("Banana","Mango");
+ 	document.write(str3+"<br>");
+ 	
+ 	// 대소문자 변환 : toUpperCase, toLowerCase
+ 	document.write(str1.toUpperCase()+"<br>");
+ 	document.write(str1.toLowerCase()+"<br>");
+ 	
+ 	// 앞뒤 공백 제거 : trim
+ 	var str4 = "  Apple, Banana, Kiwi  ";
+ 	document.write(str1.length+"<br>");         // 19
+ 	document.write(str4.length+"<br>");         // 23
+ 	document.write(str4.trim().length+"<br>");  // 19
+ 	
+ 	// 문자열을 배열로 만들자 (split("구분자"))
+ 	var str5 = "java,jsp,html,css,javascript,spring";
+ 	var str6 = str5.split(",");
+ 	// k 는 자바와 다르게 인덱스를 뜻한다.
+ 	for ( var k in str6) {
+		document.write(str6[k] + "study"+"<br>");
+	}
+ 	
+ 	// 배열을 문자열로 만들자.(join("구분자"))
+ 	var str7 = ["홍길동",24, "서울 마포구", 187.1, true];
+ 	var str8 = str7.join("*");
+ 	document.write(str8 + "<br>");
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+

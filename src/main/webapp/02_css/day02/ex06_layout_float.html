@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	#mydiv{
+		width: 960px;
+		margin: 20px auto;
+	}
+	/* 메뉴 */
+	ul{
+		list-style-type: none;
+		background-color: darkgray;
+		overflow: hidden;
+		margin-bottom: 20px;
+	}
+	li{
+		float: left;
+	}
+	li a{
+		display: inline-block;
+		text-decoration: none;
+		color: white;
+		padding: 15px 20px;
+	}
+	li a:hover {
+	background-color: lightgray;
+}
+	header{text-align: center; margin-bottom: 30px;}
+	section{width: 70%; float:left;}
+	.article{
+		height: 200px;
+		margin: 5px;
+	}
+	aside{width: 30%; float:left; }
+	footer{
+		width: 100%;
+		height: 100px;
+		background-color: lightgray;
+		clear: left;
+	}
+</style>
+</head>
+<body>
+	<div id="mydiv">
+		<header> <h1>한국 ICT 인재 개발원 소식</h1></header>
+		<nav>
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">News</a></li>
+				<li><a href="#">Content</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</nav>
+		<section>
+			<article class="article"><h1>article-1</h1>
+				<p>You can use the overflow property when you want to have better 
+     				control of the layout. The overflow property specifies what 
+     				happens if content overflows an element's box.</p>
+			</article>
+			<article class="article"><h1>article-2</h1>
+				<p>You can use the overflow property when you want to have better 
+     				control of the layout. The overflow property specifies what 
+     				happens if content overflows an element's box.</p>
+			</article>
+			<article class="article"><h1>article-3</h1>
+				<p>You can use the overflow property when you want to have better 
+     				control of the layout. The overflow property specifies what 
+     				happens if content overflows an element's box.</p>
+			</article>
+			<article class="article"><h1>article-4</h1>
+				<p>You can use the overflow property when you want to have better 
+     				control of the layout. The overflow property specifies what 
+     				happens if content overflows an element's box.</p>
+			</article>
+		</section>
+		<aside>
+			<h1>aside</h1>
+			<p>You can use the overflow property when you want to have better 
+     				control of the layout. The overflow property specifies what 
+     				happens if content overflows an element's box.</p>
+		</aside>
+		<footer>
+			<h1>footer</h1>
+		</footer>
+	</div>
+</body>
+</html>

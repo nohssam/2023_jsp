@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트</title>
+</head>
+<body>
+<!--
+	JavaScript는 <script> 태그에서 정의하고 사용된다.
+	head 태그 안이나 body 태그 안에 모두 사용가능 
+	
+	태그 속성 중 onXXXX()속성은 JavaScript의 function()을 호출하는 것이다.
+	(자바에서 메서드 호출과 같음)
+  -->
+  <h2> 자바스크립트 사용 </h2>
+  <p> html안에 자바스크립트 이용해서 텍스트 넣기 </p>
+  <hr>
+  
+  <p id="memo"></p>
+  
+  <p class="memo2"></p>
+  <p></p>
+  <p class="memo2"></p>
+  <p></p>
+  
+  <hr>
+  <script type="text/javascript">
+     document.getElementById("memo").innerHTML = "Hello JavaScript";
+     // document.getElementsByClassName("memo2").innerHTML  = "Hello JavaScript2";
+  </script>
+  
+  <h2 id="memo3">시간 표시 영역</h2>
+  <script type="text/javascript">
+  	document.getElementById("memo3").innerHTML = Date();
+  </script>
+  
+  <h2>이미지 변경</h2>
+  <img id="img" src="../../images/pic_bulboff.gif"><br>
+  
+  <button onclick="img_off()">끄기</button>
+  <button onclick="img_on()">켜기</button>
+  <script type="text/javascript">
+  	function img_off() {
+  		document.getElementById("img").src="../../images/pic_bulboff.gif";
+	}
+	function img_on() {
+		document.getElementById("img").src="../../images/pic_bulbon.gif";
+	}
+  </script>
+  <hr>
+  <button onclick="ts()">날짜보기</button>
+  <p id="memo4"></p>
+  <script type="text/javascript">
+  	function ts() {
+		document.getElementById("memo4").innerHTML = Date();
+		document.getElementById("memo4").style.color="red";
+		document.getElementById("memo4").style.backgroundColor="yellow";
+	}
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

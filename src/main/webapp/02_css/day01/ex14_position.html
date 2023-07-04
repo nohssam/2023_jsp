@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	p{
+		width: 300px;
+		border: 1px solid #ccc;
+	}
+	/*  
+	position: 1. HTML 문서상에서 요소를 배치하는 방식을 결정하는 속성
+	          absolute : 부모자리에서 이동
+	          static : 기본값, 문서의 흐믈에 거스리지 않음, 다른 요소와 겹치치 않음
+	                   top, bottom, left, right 속성에 영향을 받지 않음
+	          relative : 원래 위치에서 이동
+	          fixed    : 화면을 기준으로 절대 위치 좔표 설정
+	          sticky   : 스크롤 되어도 해당 지리를 지킨다.         
+	*/
+	
+	#pos1{
+		position: absolute;
+		left:0px;
+		top:0px;
+		background-color: yellow;
+	}
+	#pos2{
+		position: absolute;
+		left:0px;
+		top:100px;
+		background-color: red
+	}
+	#pos3{
+		position: absolute;
+		left:100px;
+		background-color: green;
+	}
+	div{
+		position: absolute;
+		left:200px;
+		top:200px;
+	}
+</style>
+</head>
+<body>
+	<div>
+	   <p id="pos1">Ex et adipisicing voluptate aliqua cupidatat nulla. Laboris est sint sit aliqua enim. Aute Lorem eu sint aute sunt proident. Do culpa consectetur elit duis laboris reprehenderit incididunt nulla. Irure exercitation tempor aliqua laboris cupidatat anim in non officia aliquip excepteur fugiat labore.</p>
+	   <p id="pos2">Lorem ipsum reprehenderit adipisicing exercitation enim velit veniam incididunt sit consectetur elit exercitation. Commodo veniam sit quis nisi ea. Ipsum do aliqua nostrud laboris elit duis adipisicing id Lorem qui. Labore dolor ipsum enim incididunt. Velit qui cillum sunt labore incididunt duis aute Lorem nulla et. Sint commodo aute amet laboris ullamco exercitation Lorem dolore veniam ut reprehenderit incididunt. Laborum nulla eiusmod cillum irure anim aute.</p>
+	   <p id="pos3">Excepteur voluptate ad irure ipsum duis. Deserunt cupidatat commodo proident eu mollit cillum commodo quis quis et ad. Incididunt adipisicing enim laboris voluptate.</p>
+   </div>
+</body>
+</html>

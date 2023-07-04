@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>grid</title>
+<style type="text/css">
+	*{box-sizing: border-box;}
+	body{
+		/* vw = viewport width, vh = viewport height*/
+		/* 현재 실행 중인 스크린 크기에 맞춰 상대적 크기를 반환
+		   width: 100vw;  height: 100vw;
+		*/
+		width: 100vw;
+		height: 100vw;
+		margin: 0;
+	}
+	.item{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid black;
+		font-weight: bold;
+	}
+	.color1 {
+  	  background-color: #d7bee2;
+	}
+	.color2 {
+  	  background-color: #a9c7d8;
+	}
+	.color3 {
+  	  background-color: #c0df9f;
+	}
+	.color4 {
+ 	   background-color: #f2e5a6;
+	}
+	.color5 {
+ 	   background-color: #e89d9d;
+	}
+	
+	.container{
+		display: grid;
+		 /* grid-template-columns: 100px 200px 100px 100px; */
+		 /* grid-template-columns: repeat(5, 20%); */
+		 
+		 /* 반응형 : 각각 비율 (1/4) (2/4) (1/4)*/	 
+		 /*  grid-template-columns: 1fr 2fr 1fr; */
+		 grid-template-columns: repeat(5, 1fr);
+		 
+		 /* grid-template-rows: 100px 200px  */
+		 
+		 /* 일정한 비율 : 글자가 많으면 짤린다. */
+		 /*  grid-auto-rows: 150px; */
+		 /* 최소 높이는 최소 크기, 글자가 많으면 자동으로 늘어나다*/
+		  grid-auto-rows: minmax(150px, auto);
+		  
+		  /* grid-gap : 10px; */
+		  grid-column-gap : 30px;
+		  grid-row-gap : 20px;
+		  /* 화면과 떨어지기 위해서  */
+		  padding: 30px;
+	}
+	
+	.item2{
+		/* 시작위치 (end-start) */
+		grid-column-start:2;
+		grid-column-end:4;
+	}
+	.item3{
+		/* 시작위치(end-start) */
+		grid-row-start:1;
+		grid-row-end:4;
+	}
+</style>
+</head>
+<body>
+<!--
+	부모 컨테이너에게 display:grid라고 지정
+	자식요소들은 grid cell
+	가로 지정 : grid-template-columns
+	세로 지정 : grid-template-rows
+    사용자지정 : grid-template-areas
+    
+    grid-gap : grid-column-gap, grid-row-gap
+    	
+  -->
+	<div class="container">
+		<div class="item item3 color1">Item1</div>
+		<div class="item item2 color2">Excepteur do est eiusmod nulla et veniam. Labore officia officia ex aliqua exercitation aliqua laborum Lorem deserunt ut ullamco labore anim. Officia eu duis aliquip incididunt. Do laborum et consequat aliqua sint consectetur.
+		Excepteur do est eiusmod e anim. Officia eu duis aliquip incididunt. Do laborum et consequat aliqua sint consectetur.</div>
+		<div class="item color3">Item3</div>
+		<div class="item color4">Item4</div>
+		<div class="item color5">Item5</div>
+		<div class="item color1">Item6</div>
+		<div class="item color2">Item7</div>
+		<div class="item color3">Item8</div>
+		<div class="item color4">Item9</div>
+		<div class="item color5">Item10</div>
+	</div>
+</body>
+</html>

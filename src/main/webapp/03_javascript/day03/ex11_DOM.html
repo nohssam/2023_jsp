@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#container{
+		width: 500px;
+		margin: auto;
+	}
+</style>
+</head>
+<body>
+	<div id="container">
+		<img id="cover" src="../../images/cup-1.png" >
+	</div>
+	<script type="text/javascript">
+		var cnt = 0 ;
+		var cover = document.getElementById("cover");
+		/* 이미지를 클릭했을 때 그림이 번갈아 변경됨
+		cover.addEventListener("click",function(){
+			if (cnt++ % 2 == 0) {
+				cover.src="../images/cup-2.png"
+			} else {
+				cover.src="../images/cup-1.png"
+			}
+		});
+		*/
+		
+		cover.addEventListener("mouseover", changPic);
+		cover.addEventListener("mouseout", originPic);
+		
+		function changPic() {
+			cover.src="../../images/cup-2.png"
+		}
+		function originPic() {
+			cover.src="../../images/cup-1.png"
+		}
+		
+	</script>
+</body>
+</html>
+
+
+
+
+

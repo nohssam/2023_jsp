@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>갤러리 만들기</title>
+<style type="text/css">
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: #232323;
+	color: white;
+}
+
+div#wrap a {
+	color: white;
+}
+
+div#wrap img {
+	border: 0px;
+	margin-top: 5px;
+}
+
+div#wrap {
+	width: 700px;
+	border: 1px solid white;
+	margin: 50px auto;
+}
+
+div#wrap>h1 {
+	font: bold 35px;
+	margin-top: 50px;
+	text-align: center;
+}
+
+ul#carList {
+	list-style-type: none;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-rows: 160px;
+	grid-gap: 50px;
+	margin: 45px;
+}
+
+li.carBox {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	border: 1px solid white;
+}
+
+li.carBox>span>a {
+	font: 12px;
+	text-decoration: none;
+}
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>자동차 목록</h1>
+		<ul id="carList">
+			<li class="carBox car1"><a href="#"> <img
+					src="../../images/Audi-R8.jpg"></a> <span><a href="#">Audi-R8</a></span>
+			</li>
+			<li class="carBox car2"><a href="#"> <img
+					src="../../images/Aston_Martin-One-77.jpg">
+			</a> <span><a href="#">Aston_Martin-One-77</a></span></li>
+			<li class="carBox car3"><a href="#"> <img
+					src="../../images/Jaguar-XJ.jpg">
+			</a> <span><a href="#">Jaguar-XJ</a></span></li>
+			<li class="carBox car4"><a href="#"> <img
+					src="../../images/BMW-Z4.jpg">
+			</a> <span><a href="#">BMW-Z4</a></span></li>
+			<li class="carBox car5"><a href="#"> <img
+					src="../../images/Bentley-Continental_GTC.jpg">
+			</a> <span><a href="#">Bentley GTC</a></span></li>
+			<li class="carBox car6"><a href="#"> <img
+					src="../../images/Hyundai-Genesis.jpg">
+			</a> <span><a href="#">Hyundai-Genesis</a></span></li>
+			<li class="carBox car7"><a href="#"> <img
+					src="../../images/Lamborghini-Reventon.jpg">
+			</a> <span><a href="#">Lamborghini-Reventon</a></span></li>
+			<li class="carBox car8"><a href="#"> <img
+					src="../../images/Ferrari-458_Italia.jpg">
+			</a> <span><a href="#">Ferrari-458_Italia</a></span></li>
+		</ul>
+	</div>
+</body>
+</html>

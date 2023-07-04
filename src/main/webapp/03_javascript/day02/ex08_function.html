@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>매개 변수(인자)를 함수로 사욛</title>
+<script type="text/javascript">
+		// 인자을 함수로 사용
+	function exec(k) {
+		// k 함수 호축
+		k();
+	}
+	function hello_1() {
+		document.write("즐거운 오전 입니다.");
+	}
+	function hello_2() {
+		document.write("즐거운 점심식사 하세요.");
+	}
+	function hello_3() {
+		document.write("즐거운 오후 입니다.");
+	}
+	function hello_4() {
+		document.write("안녕히 주무세요");
+	}
+</script>
+</head>
+<body>
+	<script type="text/javascript">
+		var time = 12;
+		var y = '';
+		if(time<12){
+			// 변수에 함수 주소를 넣었다.
+			y = hello_1();
+		}else if(time>=12 && time<=14){
+			y = hello_2();
+		}else if(time>=15 && time<=18){
+			y = hello_3();
+		}else if(time>=19){
+			y = hello_4();
+		}
+		exec(y);
+	</script>
+</body>
+</html>

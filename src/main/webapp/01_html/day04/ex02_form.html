@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form</title>
+<style type="text/css">
+	fieldset {
+	width: 60%;
+}
+</style>
+</head>
+<body>
+ <!-- fieldset : form 태그 안에서 그룹으로 표시   -->
+ <form>
+ 	<fieldset>
+ 		<legend> 상품배송 </legend>
+ 		 <!-- <label for="id">  inputy과 label를 연결하는 역할을 한다. -->
+ 		 <!--  주소지를 누르면 text 속성값의 입력창에 자동으로 커서가 생성됩니다. -->
+ 		 <label for="addr">주소지 : </label><input type="text" name ="addr" id="addr">
+ 	</fieldset>
+ 	<fieldset>
+ 		<legend> 배송정보 </legend>
+ 		주소지 : <input type="text">
+ 	</fieldset>
+ </form> 
+</body>
+</html>

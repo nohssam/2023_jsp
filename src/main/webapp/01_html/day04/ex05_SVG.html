@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SVG 그래픽</title>
+</head>
+<body>
+<!--
+	SVG : w3c에서 권고한 그래픽 처리
+	      xml 기반 (태그을 이용해서 그래픽 처리를 한다.)
+  -->
+  <!-- 원 : circle 중심좌표, 반지름 -->
+  <svg style="width: 150px; height: 150px; " >
+  	<circle cx="50", cy="50" r = "45" stroke="red" stroke-width="3" fill="yellow">	
+  </svg>
+  
+  <!-- 사각형  : rect width, height -->
+  <svg style="width: 300px; height: 300px;" >
+  	<rect style="width:150px; height:250px; fill:skyblue">	
+  </svg>
+  
+  <!-- 둥근 모서리사각형 : roundrect -->
+  <svg style="width: 100px; height: 100px">
+  	<rect x="5" y="5" rx=10 ry="10" style="width:90; height:90; stroke:bue; fill:orange">
+  </svg>
+  
+  <!-- 타원 ; ellipse rx=>수평, ry="수직"  -->
+  <svg style="width:300px; height:200px">
+    <ellipse cx="150" cy="100", rx="70", ry="50">
+   </svg>
+   <!-- 직선 line -->
+   <svg style="width: 150px; height: 150px; border: 1px solid red">
+   	    <line x1="5" y1="50"  x2="105"  y2="50"  style="stroke:blue; stroke-width:3px">  
+   		<line x1="5" y1="50"  x2="5"  y2="140"  style="stroke:blue; stroke-width:3px">
+   </svg>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

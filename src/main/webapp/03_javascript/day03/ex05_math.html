@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>당첨자 발표</title>
+<style type="text/css">
+	h1{
+		border: 1px solid black;
+		padding: 10px;
+		text-align: center;
+		background-color: #eee;
+	}
+</style>
+</head>
+<body>
+	<h1>당첨자 발표</h1>
+	<script type="text/javascript">
+		var seed = prompt("전체 응모자 수 : ");
+		var picked = Math.floor((Math.random() * seed)+1);
+		document.write("<h2>");
+		document.write("전체 응모자 수 : " + seed + "명<br>");
+		document.write("당첨자 번호는 "+ picked + "번 입니다.")
+		document.write("</h2>");
+	</script>
+</body>
+</html>

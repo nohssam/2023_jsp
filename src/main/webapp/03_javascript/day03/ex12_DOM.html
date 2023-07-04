@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>라이트 박스</title>
+<style type="text/css">
+	.row{
+		width: 420px;
+		margin: 100px auto;
+	}
+	.row ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	.row ul li {
+		display: inline-block;
+	}
+	
+	#lightbox{
+		position: fixed; /*위치 고정 */
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.4);
+		top:0;
+		left:0;
+		display: none;
+	}
+	#lightboxImage{
+		position: absolute;
+		top:50%;
+		left: 50%;
+		transform:translate(-50%,-50%) ; 
+		border: 5px solid white;
+	}
+</style>
+</head>
+<body>
+	<div class="row">
+		<ul>
+			<li><img src="../../images/tree-1-thumb.jpg" data-src="../../images/tree-1.jpg" class="pic"></li>
+			<li><img src="../../images/tree-2-thumb.jpg" data-src="../../images/tree-2.jpg" class="pic"></li>
+			<li><img src="../../images/tree-3-thumb.jpg" data-src="../../images/tree-3.jpg" class="pic"></li>
+			<li><img src="../../images/tree-4-thumb.jpg" data-src="../../images/tree-4.jpg" class="pic"></li>
+			<li><img src="../../images/tree-5-thumb.jpg" data-src="../../images/tree-5.jpg" class="pic"></li>
+			<li><img src="../../images/tree-6-thumb.jpg" data-src="../../images/tree-6.jpg" class="pic"></li>
+		</ul>
+	</div>
+	
+	<div id="lightbox">
+		<img alt="" src="../../images/tree-1.jpg" id="lightboxImage">
+	</div>
+	<script type="text/javascript">
+		var pics = document.getElementsByClassName("pic");
+		var lightbox = document.getElementById("lightbox");
+		var lightboxImage = document.getElementById("lightboxImage");
+		
+		for (var i = 0; i < pics.length; i++) {
+			pics[i].addEventListener("click", showLightbox);
+		}
+		function showLightbox() {
+			var k = this.getAttribute("data-src");
+			lightboxImage.setAttribute("src", k);
+			lightbox.style.display = "block";
+		}
+		
+		lightbox.addEventListener("click",function(){
+			lightbox.style.display = "none";
+		});
+	</script>
+</body>
+</html>
+
+
+
+

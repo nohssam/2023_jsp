@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>float</title>
+<style type="text/css">
+	nav ul{list-style-type: none;}
+	nav ul li{
+	  display: inline-block;
+	  padding: 20px;
+	  margin: 0px 20px;
+	  border: 1px solid black;
+	}
+	#myimg1{
+		float: left; 
+		width: 150px;
+		margin: 20px;
+	}
+	#mybox{
+		/* 위에 지정된 float: left 해제하자 */
+		clear: left;
+	}
+	#myimg2{
+		width: 150px;
+		margin: 20px;
+		float: right;
+	}
+</style>
+</head>
+<body>
+<!--
+	float : 화면 좌우에 어떤 요소가 자리를 차지할 수 있도록 지정
+	        원래 목적은 그림과 그자 위치 지정 (day02-ex05)
+	        메뉴 만들때 사용: (day03-ex08)
+	  - left, right, none, inherit (부모의 float값을 상속 받는다.)
+	  
+	 clear : float 해제  
+	  - left, right, both(left, right)      
+  -->
+  <header>
+  	<nav>
+  		<ul>
+  			<li>menu 1</li>
+  			<li>menu 2</li>
+  			<li>menu 3</li>
+  			<li>menu 4</li>
+  		</ul>
+  	</nav>
+  </header>
+  <section>
+  	<article>
+  		<h2> 이미지와 그림의 조화 </h2>
+  		 <img id="myimg1" src="../../images/example_img_girl.jpg">
+		     이것은 이미지가 글자의 왼쪽에 위치하게 합니다.
+		     이것은 이미지가 글자의 왼쪽에 위치하게 합니다.
+		     이것은 이미지가 글자의 왼쪽에 위치하게 합니다.
+		     이것은 이미지가 글자의 왼쪽에 위치하게 합니다.
+		     이것은 이미지가 글자의 왼쪽에 위치하게 합니다.
+		     이것은 이미지가 글자의 왼쪽에 위치하게 합니다.
+  	</article>
+  	<article id="mybox">
+  		<!-- 위에 float 영향을 받는다. -->
+  		<h2> 이미지와 그림의 조화 </h2>
+  		 <img id="myimg2" src="../../images/example_img_girl.jpg">
+		     이것은 이미지가 글자의 왼쪽에 위치하게 합니다.
+		     이것은 이미지가 글자의 왼쪽에 위치하게 합니다.
+		     이것은 이미지가 글자의 왼쪽에 위치하게 합니다.
+		     이것은 이미지가 글자의 왼쪽에 위치하게 합니다.
+		     이것은 이미지가 글자의 왼쪽에 위치하게 합니다.
+		     이것은 이미지가 글자의 왼쪽에 위치하게 합니다.
+		     이것은 이미지가 글자의 왼쪽에 위치하게 합니다.
+		     이것은 이미지가 글자의 왼쪽에 위치하게 합니다.
+		     이것은 이미지가 글자의 왼쪽에 위치하게 합니다.
+		     이것은 이미지가 글자의 왼쪽에 위치하게 합니다.
+		     이것은 이미지가 글자의 왼쪽에 위치하게 합니다.
+  	</article>
+  </section>
+  
+</body>
+</html>

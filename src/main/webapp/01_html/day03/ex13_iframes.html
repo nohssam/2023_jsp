@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>다른 페이지를 자겨오는 iframe</title>
+</head>
+<body>
+<!--
+	보안적인 요소로 권장하지는 않는다.
+	웹 페이지내에서 다른 웹페이지를 표시할 때 사용
+	<iframe src="url"></iframe>
+	  속성으로는  width, height, style="border"
+	  target과 name 을 이용할 수 도 있다.
+  -->
+  <h2> 여기는 Ex13_iframes 페이지 입니다.</h2>
+  <p> 웹 페이지 내에서 다른 웹 페이지를 표시할 때 사용한다. </p>
+  <hr>
+  
+  <p><iframe src="ex08_ul_menu.html"></iframe></p>
+  <hr>
+  
+  <p><iframe src="ex08_ul_menu.html" style="width: 800px"></iframe></p>
+  <hr>
+  
+  <p><iframe src="ex08_ul_menu.html" style="width: 100%; border: none;"></iframe></p>
+  <hr>
+  
+  <p><iframe src="ex08_ul_menu.html" style="width: 100%; border: none;" name="doc04"></iframe></p>
+  <p> <a href="ex04_tableStyling.html" target="doc04">ex04 문서 가져오기</a></p>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+

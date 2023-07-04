@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#mydiv{
+		width: 600px;
+		margin: auto;
+	}
+</style>
+</head>
+<body>
+	<div id="mydiv">
+		<h1>개발자 지원서</h1>
+		<p> HTML, CSS, JavaScript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+		<hr>
+		<form>
+			<h3>개인 정보</h3>
+			<ul>
+				<li>
+					<label for="sname">이름</label>
+					<input type="text" id="sname" name="name" placeholder="공백없이 입력하세요">
+				</li>
+				<li>
+					<label for="sphone">연락처</label>
+					<input type="text" id="sphone" name="spone">;
+				</li>
+			</ul>
+			
+			<h3>지원 분야</h3>
+			<ul>
+				<li>
+					<input type="radio" id="field1" name="field" value="1">
+					<label for="field1">웹 퍼블리싱</label>
+				</li>
+				<li>
+					<input type="radio" id="field2" name="field" value="2">
+					<label for="field2">웹 애플리케이션 개발</label>
+				</li>
+				<li>
+					<label><input type="radio" name="field" value="3"> 개발 환경 개선</label>
+				</li>
+			</ul>
+			<h3>지원 동기</h3>
+			<textarea rows="5" cols="60" placeholder="지원동기를 간단히 써 주세요."></textarea>
+			<div style="margin-top: 20px; text-align: center;" >
+				<!-- 
+				  <input type="submit" value="접수하기">
+				  <input type="reset" value="다시쓰기"> 
+				-->
+				<button type="submit">접수하기</button>
+				<button type="reset">다시쓰기</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

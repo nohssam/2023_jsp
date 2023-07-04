@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열 : Array()</title>
+<script type="text/javascript">
+	// 배열 : 크기를 지정하지 않아도 된다. 모든 자료를 담을 수 있다.
+	// 방법1
+	var arr = new Array();
+	arr[0] = 10;
+	arr[1] = true;
+	arr[2] = 'A';
+	arr[3] = '한국 ict 인재 개발원';
+	arr[4] = 167.21 ;
+	
+	// 출력
+	for (var i = 0; i < arr.length; i++) {
+		document.write(arr[i] + "&nbsp;&nbsp;");
+	}
+	document.write("<hr>");
+	// 자바의 foreach 와 비슷한 forin문 있다.
+	// 자바는 데이터자체를 넘기지만 자바스크립트는 index를 넘긴다.
+	// 여기서 k는 index
+	for ( var k in arr) {
+		// document.write(k + "&nbsp;&nbsp;");
+		document.write(arr[k]+ "&nbsp;&nbsp;")
+	}
+	document.write("<hr>");
+	
+	// 방법2
+	var arr2 = ["포도", 15, false, 98.7];
+	for ( var k in arr2) {
+		// document.write(k + "&nbsp;&nbsp;");
+		document.write(arr2[k]+ "&nbsp;&nbsp;")
+	}
+	document.write("<hr>");
+	
+	// 문자열을 배열로 만들자 
+	var myData = "java,jsp,html,css,javascript,spring";
+	// myArr는 , 을 기준으로 배열로 만들어졌다.
+	var myArr = myData.split(",");
+		
+	for ( var k in myArr) {
+		// document.write(k + "&nbsp;&nbsp;");
+		document.write(myArr[k]+ "&nbsp;&nbsp;")
+	}
+	document.write("<hr>");
+	
+	// arr2 배열을 문자열로 만들자.
+	// 배열.join("구분자");
+	var myData2 = arr2.join(",");
+	document.write(myData2);
+	document.write("<hr>");
+	
+	// 자바스크립트의 배열은 추가 삭제가 가능 
+	var myArr3 = ["java", "html","css","js"];
+	// 뒤에 추가
+	myArr3.push("jsp");
+	// 앞에 추가
+	myArr3.unshift("spring");
+	
+	for ( var k in myArr3) {
+		document.write(myArr3[k]+ "&nbsp;&nbsp;")
+	}
+	document.write("<hr>");
+	
+	// 추출 - 꺼낸 요소 반환
+	// 뒤 요소 삭제 - pop();
+	// 앞 요소 삭제 - shift();
+	// k1는 삭제된 요소를 가지고 있다.
+	var k1 = myArr3.pop();
+	document.write("삭제된 요소 : " + k1);
+	
+	document.write("<hr>");
+	
+	for ( var k in myArr3) {
+		document.write(myArr3[k]+ "&nbsp;&nbsp;")
+	}
+	document.write("<hr>");
+	
+	var k2 = myArr3.shift();
+	document.write("삭제된 요소 : " + k2);
+	
+	document.write("<hr>");
+	
+	for ( var k in myArr3) {
+		document.write(myArr3[k]+ "&nbsp;&nbsp;")
+	}
+	document.write("<hr>");
+	
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+
+
+

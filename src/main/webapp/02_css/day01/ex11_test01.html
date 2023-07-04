@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+  #mydiv{
+  	width: 600px;
+  	margin: auto;
+  }
+  ul{
+  	list-style: none;
+  	padding-left: 0;
+  }
+  ul li{
+  	margin: 20px;
+  }
+  li label{
+  	width: 120px;
+  	font-weight: bold;
+  	line-height: 36px;
+  	float:left;
+  }
+  fieldset{
+  	margin-bottom: 20px;
+  }
+  input[type="text"], input[type="password"]{
+  	width: 300px;
+  	height: 30px;
+  }
+  #buttons{
+  	width: 600px;
+  	text-align: center;
+  }
+  #buttons input{
+  	width: 150px;
+  	height: 50px;
+  	font-size: 20px;
+  }
+   #buttons input:hover{
+  	background-color: gray;
+  	color: white;
+  }
+</style>
+</head>
+<body>
+	<div id="mydiv">
+	<h1>회원 가입을 환영합니다.</h1>
+	<form>
+		<fieldset>
+			<legend>사용자 정보</legend>
+			<ul>
+				<li>
+					<label for="uid">아이디</label>
+					<input type="text" id="uid" name="id" required autofocus>
+				</li>
+				<li>
+					<label for="umail">이메일</label>
+					<input type="text" id="umail" name="mail" >
+				</li>
+				<li>
+					<label for="upwd1">비밀번호</label>
+					<input type="password" id="upwd1" name="pwd1" >
+				</li>
+					<li>
+					<label for="upwd2">비밀번호 확인</label>
+					<input type="password" id="upwd2" name="pwd2" >
+				</li>
+			</ul>
+		</fieldset>
+		<fieldset>
+			<legend>이벤트와 새로운 소식</legend>
+			<input type="radio" name="mailing" id="mailing_y" value="1">
+			<label for="mailing_y">메일 수신</label> 
+			
+			<input type="radio" name="mailing" id="mailing_n" value="2" checked>
+			<label for="mailing_n">메일 수신 안 함</label> 
+		</fieldset>
+		<div id="buttons">
+			<input type="submit" value="가입하기">
+			<input type="reset" value="취소">
+		</div>
+	</form>
+	</div>
+</body>
+</html>

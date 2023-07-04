@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트</title>
+<style type="text/css">
+	/* css 에서는 아이디 : #(샵), 클래스는 .(점) */
+	#mybox{
+		width: 300px;
+		height: 300px;
+		border: 1px solid red;
+	}
+</style>
+</head>
+<body>
+	<button onclick="test1()">버튼1</button>
+	<button onclick="test2()">버튼2</button>
+	<form action="#">
+		<p><label for="uid">ID : </label><input type="text" id="uid" name="uid" value="40"> </p>
+		<p><label for="s_info">자기소개</label></p>
+		<textarea rows="6" cols="50" id="s_info" name="s_info"></textarea>
+	</form>
+	<hr>
+	<div id="mybox">Hello JS</div>
+	
+	<script type="text/javascript">
+		function test1() {
+			// js에서 id를 선택하는 방법
+			var k = document.getElementById("uid");
+			k.value = 20;
+			// 클래스를 선택하는 방법
+			// var k = document.getElementsByClassName("");
+			// 태그를 선택하는 방법
+			// var k = document.getElementsByTagfName("");
+		}
+		function test2() {
+			var k2 = document.getElementById("s_info");
+			k2.value="Hello";
+			
+			var box = document.getElementById("mybox");
+			// box.value = "Hi~~~~"; input type 아니기 때문에 안됨
+			// innerHTML은 요소(태그)내에 포함된 HTML을 가져오거나 설정할 때 사용
+			
+			box.innerHTML = "<h2> Hi~~~ </h2>";
+		}
+	</script>
+</body>
+</html>

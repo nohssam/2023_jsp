@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table :nth-child(even|odd)</title>
+<style type="text/css">
+	table {
+	   width: 50%;
+	   margin: auto;
+    }
+    th,td{
+    	text-align:center;
+    }
+    /*  수직: th,td  even(짝수), odd(홀수) */
+    /* 가상선택자*/
+    /* td:nth-child(N),th:nth-child(N)  => 부모안에 모든 요소중 N번째 요소*/
+    /* td:first-child =>  첫번재 요소 , td:last-child:마지막요소*/
+     tbody td:nth-child(even), thead th:nth-child(even) {
+	     background-color: yellow;
+     }	 
+
+     tbody td:first-child, th:first-child {
+     	color: skyblue;
+     }
+     tbody td:last-child, th:last-child  {
+     	color: red;
+     }
+            
+</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr><th>이름</th><th>나이</th><th>주소</th><th>포인트</th></tr>
+		</thead>
+		<tbody>
+			<tr><td>홍길동</td><td>21</td><td>경기도</td><td>30,000</td></tr>
+			<tr><td>고길동</td><td>11</td><td>서울시</td><td>15,000</td></tr>
+			<tr><td>남궁길동</td><td>47</td><td>경상남도</td><td>24,000</td></tr>
+			<tr><td>박길동</td><td>35</td><td>함경도</td><td>16,000</td></tr>
+		</tbody>
+	</table>
+</body>
+</html>

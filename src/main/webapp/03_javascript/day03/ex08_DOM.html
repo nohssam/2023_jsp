@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM(Document Object Model)</title>
+</head>
+<body>
+<!--
+	DOM : 문서의 구조화된 표현을 제공하는 프로그래밍 언어가 
+	      DOM 구조에 접근할 수 있는 방법을 제공하여 
+	      문서의 구조, 스타일 내용등을 변경할 수 있게 한다.
+	      ** 구조화된 표현  = 계층적 구조 = 족보
+	      == 부모, 자식, 형제로 요소들 표현 한다. 
+  -->
+  <p id="demo1">Hello World</p>
+  <p><span>WelCome JavaScript</span></p>
+  <p class="demo2">서울시 마포구 신수동</p>
+  <p class="demo2">거구장 3층</p>
+  <p class="demo2">1강의실</p>
+  <hr>
+  <p id="res1"></p>
+  <p id="res2"></p>
+  <p id="res3"></p>
+  
+  <script type="text/javascript">
+   	// html  요소 찾기
+   	// 1. document.getElementById("id");            // 하나
+   	// 2. document.getElementsByClassName("class")  // 하나 또는 여러개 (배열)
+   	// 3. document.getElementsByTagName("tag")      // 하나 또는 여러개 (배열)
+   
+   	// innerText : 요소내에 포함된 글자를 가져오거나 설정할 때 사용 
+   	// innerHTML : 요소내에 포한된 HTML 가져오거나 설정할 때 사용
+   	
+   	var str = document.getElementById("demo1").innerHTML; //getter
+   	console.log('str = ' + str);
+   	
+   	document.getElementById("res1").innerHTML = str ;     //setter 
+   	
+   	var str2 = document.getElementsByClassName("demo2");
+   	document.getElementById("res2").innerHTML = str2[0].innerHTML +","+str2[1].innerHTML+","+str2[2].innerHTML;
+   	
+   	var str3 = document.getElementsByTagName("span");
+   	document.getElementById("res3").innerHTML = str3[0].innerHTML ;
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+

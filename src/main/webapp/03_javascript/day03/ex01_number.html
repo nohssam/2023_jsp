@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Number 클래스</title>
+<script type="text/javascript">
+	var s1 = 10 ;
+	var s2 = 6;
+	document.write("<h2>");
+	document.write("<li>" + (s1+s2) + "</li>");
+	document.write("<li>" + (s1-s2) + "</li>");
+	document.write("<li>" + (s1*s2) + "</li>");
+	document.write("<li>" + (s1/s2).toFixed(1) + "</li>");
+	document.write("<li>" + (s1%s2) + "</li>");
+	document.write("<hr>");
+	
+	s1 = "10" ;
+	s2 = "6";
+	document.write("<h2>");
+	document.write("<li>" + (s1+s2) + "</li>"); // 계산X, 문자열결자
+	document.write("<li>" + (s1-s2) + "</li>"); // 계산가능
+	document.write("<li>" + (s1*s2) + "</li>"); // 계산가능
+	document.write("<li>" + (s1/s2).toFixed(1) + "</li>"); // 계산가능
+	document.write("<li>" + (s1%s2) + "</li>"); // 계산가능
+	document.write("<hr>");
+	
+	s1 = 10 ;
+	s2 = "6";
+	document.write("<h2>");
+	document.write("<li>" + (s1+s2) + "</li>"); // 계산X, 문자열결자
+	document.write("<li>" + (s1-s2) + "</li>"); // 계산가능
+	document.write("<li>" + (s1*s2) + "</li>"); // 계산가능
+	document.write("<li>" + (s1/s2) + "</li>"); // 계산가능
+	document.write("<li>" + (s1%s2) + "</li>"); // 계산가능
+	document.write("<hr>");
+	
+	s1 = "10" ;
+	s2 = 6;
+	document.write("<h2>");
+	document.write("<li>" + (s1+s2) + "</li>"); // 계산X, 문자열결자
+	document.write("<li>" + (s1-s2) + "</li>"); // 계산가능
+	document.write("<li>" + (s1*s2) + "</li>"); // 계산가능
+	document.write("<li>" + (s1/s2) + "</li>"); // 계산가능
+	document.write("<li>" + (s1%s2) + "</li>"); // 계산가능
+	document.write("<hr>");
+	
+	// 숫자를 문자열로 변경 toString()
+	s1 = 10 ;
+	s2 = 6 ;
+	document.write("<li>" + (s1+s2) + "</li>"); 
+	document.write("<li>" + (s1.toString()+s2) + "</li>"); 
+	
+	// toFixed(자릿수) : 지정된 소숫점 이하 자릿수 작성(반올림), 음수는 사용 못함
+	s1 = 2147.656;
+	s2 = 2147.444;
+	document.write("<li>"+s1.toFixed(0)+"</li>"); // 2148
+	document.write("<li>"+s2.toFixed(0)+"</li>"); // 2147
+	
+	document.write("<li>"+s1.toFixed(1)+"</li>"); // 2147.7
+	document.write("<li>"+s2.toFixed(1)+"</li>"); // 2147.4
+	document.write("<hr>");
+	
+	// 문자열을 숫자로 변환 : Number, parseInt, parseFloat
+	// NaN(Not a Number) : 숫자가 들어갈 자리에 숫자가 아닌 다른 값이 들어오면 표시되는 예약어
+	// isNaN : NaN를 확인하는 함수(NaN 이면 true, 아니면 false);
+	document.write("<li>" + (Number(true) + 10) + "</li>");   // 11
+	document.write("<li>" + (Number(false) + 10) + "</li>");  // 10 
+	document.write("<li>" + ("10"+ 10) + "</li>");            // 1010
+	document.write("<li>" + (Number("10") + 10) + "</li>");   // 20 
+	document.write("<li>" + ("10.3"+ 10) + "</li>");          // 10.310
+	document.write("<li>" + (Number("10.3") + 10) + "</li>"); // 20.3  
+	document.write("<hr>");
+	
+	document.write("<li>" + (Number("10,003") + 10) + "</li>"); // NaN
+	document.write("<li>" + (Number("10A") + 10) + "</li>");    // NaN  
+	document.write("<li>" + (Number("A10") + 10) + "</li>");    // NaN  
+	document.write("<li>" + (Number("   10") + 10) + "</li>");  // 20
+	document.write("<li>" + (Number("10   ") + 10) + "</li>");  // 20
+	document.write("<li>" + (Number("hello") + 10) + "</li>");  // NaN
+	document.write("<hr>");
+	
+	// 숫자로 시작해서 문자을 만나기전까지의 숫자는 숫자는 변경 
+	document.write("<li>" + (parseInt(true) + 10) + "</li>");     // NaN
+	document.write("<li>" + (parseInt(false) + 10) + "</li>");    // NaN
+	document.write("<li>" + (parseInt("10,003") + 10) + "</li>"); // 20
+	document.write("<li>" + (parseInt("10A") + 10) + "</li>");    // 20 
+	document.write("<li>" + (parseInt("A10") + 10) + "</li>");    // NaN  
+	document.write("<li>" + (parseInt("   10") + 10) + "</li>");  // 20
+	document.write("<li>" + (parseInt("10   ") + 10) + "</li>");  // 20
+	document.write("<li>" + (parseInt("hello") + 10) + "</li>");  // NaN
+	
+	document.write("</h2>");
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+
+
+

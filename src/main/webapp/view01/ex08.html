@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	fieldset {
+	width: 300px;
+ }
+ #mydiv, #mydiv2, #mydiv3{
+ 	width: 600px;
+ 	margin: 50px auto;
+ }
+ label{
+ 	width: 80px;
+ 	height: 30px;
+ 	float: left;
+ 	line-height: 30px;
+ }
+ input{ height: 30px;} 
+</style>
+<script type="text/javascript">
+	function send_go(f) {
+		// 유효성 검사
+		for (var i = 0; i < f.elements.length; i++) {
+			if(f.elements[i].value == ""){
+				alert(f.elements[i].name+"를 입력하세요");
+				f.elements[i].focus();
+				return;
+			}
+		}
+		f.action = "/jsp/Ex08";
+		f.submit();
+	}
+</script>
+<script type="text/javascript">
+	function send_go2(f) {
+		f.action = "/jsp/Ex08";
+		f.submit();
+	}
+</script>
+</head>
+<body>
+	<form action="/jsp/Ex08" method="post">
+		<fieldset>
+			<legend> 성적 입력 </legend>
+			<p>이름 : <input type="text" name="name" required></p>
+			<p>국어 : <input type="number" name="kor" max="100" required></p>
+			<p>영어 : <input type="number" name="eng" max="100" required></p>
+			<p>수학 : <input type="number" name="math" max="100" required></p>
+			<input type="submit" value="결과보기">
+			<input type="reset" value="취소">
+		</fieldset>
+	</form>
+	<!-- required가 실행 되지 않는다. -->
+	<form method="post">
+		<fieldset>
+			<legend> 성적 입력 </legend>
+			<p>이름 : <input type="text" name="name" required></p>
+			<p>국어 : <input type="number" name="kor" max="100" required></p>
+			<p>영어 : <input type="number" name="eng" max="100" required></p>
+			<p>수학 : <input type="number" name="math" max="100" required></p>
+			<input type="button" value="결과보기"  onclick="send_go(this.form)">
+			<input type="reset" value="취소">
+		</fieldset>
+	</form>
+	<!-- 자바스크립트 함수는 가지만  required가 실행 된다. -->
+	<form method="post" onsubmit="send_go2(this)">
+		<fieldset>
+			<legend> 성적 입력 </legend>
+			<p>이름 : <input type="text" name="name" required></p>
+			<p>국어 : <input type="number" name="kor" max="100" required></p>
+			<p>영어 : <input type="number" name="eng" max="100" required></p>
+			<p>수학 : <input type="number" name="math" max="100" required></p>
+			<input type="submit" value="결과보기" >
+			<input type="reset" value="취소">
+		</fieldset>
+	</form>
+</body>
+</html>

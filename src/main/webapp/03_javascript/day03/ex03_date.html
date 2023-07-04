@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <title>독서 챌린지</title>
+  <style>
+    #container{
+      margin:50px auto;
+      width:300px;
+      height:300px;
+      border-radius:50%;
+      border:2px double #222;
+      background-color:#d8f0fc;
+      text-align: center;
+    }
+    h1 {
+      margin-top:80px;
+    }
+    .accent {
+      font-size:1.8em;
+      font-weight:bold;
+      color:red;
+    }
+  </style>
+
+</head>
+<body>
+  <div id="container">
+    <h1>책 읽기</h1>
+    <p><span class="accent" id="result"></span>일 연속으로 <br> 책 읽기를 달성했군요.</p>
+    <p>축하합니다!</p>
+  </div>  
+  <script type="text/javascript">
+  	var now = new Date();                  // 오늘 날짜
+  	var firstDay = new Date("2023-04-25"); // 시작 날짜
+  	var toNow = now.getTime();             // 오늘까지 지난 시간 (밀리초)
+  	var toFirst = firstDay.getTime();      // 시작날짜 까지 지난 시간 (밀리초) 
+  	// console.log("toNow : " + toNow);
+  	var result = toNow - toFirst ;
+  	
+  	// 밀리초를 다시 일수로 계산하고 반올림
+  	// result = (result/(1000*60*60*24)).toFixed(0);
+  	 result = Math.round(result/(1000*60*60*24)); // Math.round() => 반올림, Math.random() => 난 수 (0.0-1.0미만)
+  	
+  	document.getElementById("result").innerHTML = result;
+  </script>
+</body>
+</html>

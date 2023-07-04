@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 속성 선택자 </title>
+<style type="text/css">
+	ul{ list-style-type: none;}
+	li{
+		width: 120px;
+		display: inline-block;
+		margin: 10px;
+	}
+	li a{
+		padding: 5px 20px;
+		text-decoration: none;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	
+	/* a[href] : a태그 속성 중 href 속성을 가진 태그 */
+	a[href]{
+		background-color: yellow;
+		border : 1px solid #ccc;
+		font-weight: bolid;
+	}
+	
+	a[href $= net]{
+		color : red;
+	}
+	a[href ^= https]{
+		color: orange;
+	}
+	
+   /* class 값 중 bnt 인것  */
+   /*[class = bnt]{ 
+   /*[class ~= bnt]{*/
+	[class *= bnt]{
+		box-shadow: rgba(0,0,0,0.5) 4px 4px;
+		border-radius: 5px;
+		border:1px solid #222;
+	}
+	
+</style>
+</head>
+<body>
+<!--
+    - 속성 선택자 : 선택자[속성이름] => 해당 속성과 일치하는 태그를 선택
+    -            선택자[속성=값]  => 해당 속성과 일치하는 태그를 선택   
+	-            선택자[속성^=값] => 해당 속성이 ~로 시작하는 태그 선택
+	-            선택자[속성*=값] => 해당 속성이 ~을 포함하는 태그 선택 
+	-            선택자[속성&=값] => 해당 속성이 ~로 끝나는 태그 선택 -->
+	
+	<ul>
+		<li><a>메인 메뉴 : </a></li>
+		<li><a href="https://www.naver.com">메뉴 1</a></li>
+		<li><a href="http://www.google.com" class="bnt">메뉴 2</a></li>
+		<li><a href="http://www.daum.net"  class="bnt">메뉴 3</a></li>
+		<li><a href="https://www.w3.org">메뉴 4</a></li>
+	</ul>
+</body>
+</html>

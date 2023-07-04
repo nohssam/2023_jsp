@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>a 태그 속성</title>
+<style type="text/css">
+	a:link { color: tomato}
+	a:visited  { color: tomato}
+	a:active { color: tomato}
+	a:hover { color: tomato; background-color: yellow;}
+	a{
+	   text-decoration: none
+	}
+</style>
+</head>
+<body>
+<!--
+	a:link     => 일반적인 링크색 (아직 방문하지 않음, blue)
+	a:visited  => 방문한 적이 있는 링크색 (purple) 
+	a:active   => 클릭한 상태 (red)
+	a:hover    => 마우스 포인터가 해당 영역에 올라왔을 때 
+	--------------------------------------------
+	text-decoration : none; (링크의 밑줄 삭제)
+  -->
+  <a href="https://www.naver.com">Naver</a> <br>
+  <a href="https://www.daum.net">Daum</a> <br>
+  <a href="https://google.com">Google</a> <br>
+  <hr>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table : 테이블 (표)</title>
+<style type="text/css">
+	table {
+	  width: 50%;
+	  margin: 0 auto;
+	  /*border: 1px; 사용불가*/
+   }
+   /* border 사용하기 */
+   table, th, td{
+   	  border:1px solid tomato;
+   	  /* 한줄 만들기*/
+   	  border-collapse: collapse;
+   }
+   th{
+   	 background-color: skyblue;
+   }
+   /* 글자 가운데 */
+   td{
+   	  text-align: center;
+   }
+   /*행 높이*/
+   tr{
+   	height: 50px;
+   }
+</style>
+</head>
+<body>
+<!-- 
+	table 태그 안에 존재하는 태그들
+	 - thead 태그 : 테이블의 머리글, 생략가능
+	 - tbody 태그 : 테이블 본문,
+	 - tfoot 태그 : 테이블의 꼬리글, 생략가능
+
+      -- tr 태그 : 행
+        --- th 태그 : 행안에 존재하는 컬럼(굵게, 가운데 정렬이 된다.)
+        --- td 태그 : 행안에 존재하는 컬럼
+        
+        테이블 태그에 테두리를 지정하지 않으면 나타나지 않음
+        보통 style을 지정해서 테이블 테두리를 만든다.
+ -->
+ 
+ <h2 style="text-align: center;"> thead, tbody, tfoot 사용하지 않은 경우 </h2>
+ <!-- style="width: 70%" : 전체화면의 70% -->
+ <!-- style=" margin: 0 auto" : 가운데 정렬 -->
+ <table style="width: 70%; margin: 0 auto"  border="2px" >
+ 	<tr>
+ 		<th style="width: 20%">이름</th><th style="width: 40%">나이</th><th style="width: 40%">주소</th>
+ 	</tr>
+ 	<tr>
+ 		<td>둘리</td><td>14</td><td>남극</td>
+ 	</tr>
+ 	<tr>
+ 		<td>공실이</td><td>12</td><td>북극</td>
+ 	</tr>
+ 	<tr>
+ 		<td>희동이</td><td>3</td><td>서울</td>
+ 	</tr>
+ </table>
+ 
+ <hr>
+  <h2 style="text-align: center;"> thead, tbody, tfoot 사용한 경우 </h2>
+  <table>
+  
+  	<tbody>
+  	    <tr><td>둘리</td><td>14</td><td>남극</td></tr>
+ 		<tr><td>공실이</td><td>12</td><td>북극</td></tr>
+ 		<tr><td>희동이</td><td>3</td><td>서울</td></tr>
+  	</tbody>
+  	<tfoot>
+  	    <tr><td>고길동</td><td>36</td><td>제주도</td></tr>
+  	</tfoot>
+  	<thead>
+  	 	<tr><th>이름</th><th>나이</th><th>주소</th>	</tr>
+  	</thead>
+  </table>
+ 
+</body>
+</html>
+
+
+
+
+
+
+

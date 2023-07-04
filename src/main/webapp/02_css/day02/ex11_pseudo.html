@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가상 선택자 :pseudo select </title>
+<style type="text/css">
+	.navi ul{
+		list-style-type: none;
+		padding-top: 10px;
+		padding-bottom : 5px;
+	}
+	.navi ul li{
+		float: left;
+		width: 150px;
+		padding: 10px;
+	}
+	/* 가상 선택자 : 클래스:가상선택자 */
+	.navi a:link, .navi a:visited{
+		display: block;
+		font-size: 14px;
+		color:black;
+		padding: 10px;
+		text-decoration: none;
+		text-align: center;	
+	}
+	.navi a:hover, .navi a:focus {
+	  background-color: #222;
+	  color:#fff;
+   }
+   .navi a:active {
+	   background-color: red;
+	   padding: 10px;
+  }
+</style>
+</head>
+<body>
+ <nav class="navi">
+ 		<ul>
+ 			<li><a href="#">이용 안내</a></li>
+ 			<li><a href="#">객실 소개</a></li>
+ 			<li><a href="#">예약 방법 및 요금</a></li>
+ 			<li><a href="#">예약 하기 </a></li>
+ 		</ul>
+ </nav>
+</body>
+</html>

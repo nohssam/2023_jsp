@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Array</title>
+<script type="text/javascript">
+	var arr = [1,2,3,4,5];
+	// splice(index) : index기준으로 나눈다.
+	// arr의 index 1부터 끝까지 삭제, 삭제된 요소들이 res에 저장
+	var res = arr.splice(1);
+	document.write("기존 배열 : " + arr + "<br>");
+	document.write("변경된 배열 : " + res + "<br>");
+	document.write("<hr>");
+	
+	var arr2 = ["html","css", "js", "spring"];
+	// splice(index,갯수);
+	// arr2의 index 2부터 1개 삭제, 삭제된 요소들이 res2에 저장
+	var res2 = arr2.splice(2,1);
+	document.write("기존 배열 : " + arr2 + "<br>");
+	document.write("변경된 배열 : " + res2 + "<br>");
+	document.write("<hr>");
+	
+	var arr3 = ["html","css", "js", "spring"];
+	// splice(index,갯수, 새로들어가 요소);
+	// arr2의 index 2부터 1개 삭제, 삭제된 요소들이 res2에 저장
+	var res3 = arr3.splice(2,1,"jQuery","ajax");
+	document.write("기존 배열 : " + arr3 + "<br>");
+	document.write("변경된 배열 : " + res3 + "<br>");
+	document.write("길이 : " + arr3.length);
+	document.write("<hr>");
+</script>
+</head>
+<body>
+</body>
+</html>

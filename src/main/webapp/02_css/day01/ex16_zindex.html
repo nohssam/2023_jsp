@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>z-index : 겹쳤을 때 우선 순위</title>
+<style type="text/css">
+	/* z-index : 요소를 쌓는 순서 지정
+	   가장 먼저 삽입되는 요소가 1,2,....
+	   -1은 텍스트 뒤 배치된다.
+	*/
+	div{
+		width: 200px;
+		height: 200px;
+		border: 1px solid black;
+		margin: 0px;
+		padding: 0px;
+	}
+	#con1{
+		position: absolute;
+		background-color: red;
+		z-index: 3 ; 
+	}
+	#con2{
+		position: absolute;
+		background-color: green;
+		top: 50px;
+		left:50px;
+		z-index: 3;
+	}
+	#con3{
+		position: absolute;
+		background-color:blue;
+		top: 100px;
+		left:100px;
+		z-index: 1;
+	}
+</style>
+</head>
+<body>
+	<div id="con1">z-index</div>
+	<div id="con2">z-index</div>
+	<div id="con3">z-index</div>
+</body>
+</html>

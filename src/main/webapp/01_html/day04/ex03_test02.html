@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+		#mydiv{
+			width: 600px;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="mydiv">
+		<h1>주문하기</h1>
+		<form>
+			<fieldset>
+				<legend>배송정보</legend>
+				<p>
+					<label for="name">이름</label>
+					<input type="text" id="uname" name="name">
+				</p>
+				<p>
+					<label for="addr">배송 주소</label>
+					<input type="text" id="addr" name="addr">
+				</p>
+				<p>
+					<label for="mail">이메일</label>
+					<input type="text" id="mail" name="mail">
+				</p>
+				<p>
+					<label for="phone">연락처</label>
+					<input type="text" id="phone" name="phone">
+				</p>
+				<p>
+					<label for="d_day">배송지정</label>
+					<input type="date" id="d_day" name="d_day"> <sub>(주문일로 부터 최소 3일 이후)</sub><br>
+					<label for="d_day2">배송지정2</label>
+					<!-- 한 사이즈 작은 글꼴 -->
+					<input type="date" id="d_day2" name="d_day2"> <small>(주문일로 부터 최소 3일 이후)</small>
+				</p>
+				<p>
+					<label for="memo">메모</label>
+					<textarea rows="4" cols="40" id="memo"></textarea>
+				</p>
+				<p>
+					<input type="submit" value="주문하기" >
+					<input type="reset" value="취소하기" >
+				</p>
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

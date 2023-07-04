@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>반응형 웹 - 뷰 포트</title>
+<style type="text/css">
+	body{
+		background-color: lightblue;
+	}
+  h1{
+	font-size: 5vw;
+	text-align: center;
+	} 
+   /* 스크린의 크기가 600이하이면 body 배경색을 변경하자. */
+  @media only screen and (max-width: 600px){
+		body {
+		  background-color: lightpink;
+		}
+  }
+</style>
+</head>
+<body>
+<!--
+	반응형 웹 디자인 이란 웹 페이지가 모든 장치에서 잘 보이도록 만드는 것이다.
+	반응형 웹 디자인 HTML과 CSS만 사용한다.
+	HTML, CSS를 사용하여 콘첸츠의 크기를 조정, 숨기기, 축소, 확대 또는 이동하여 모든 화면에서 
+	보기 좋게 만든 것을 반응형 웹 디자인이라고 한다.
+
+	* 뷰 포트 : 웹 페이지에서 사용자가 볼 수 있는 영역
+      head 부분에 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> 입력한다.
+      단위
+	  vw : viewport width  : 뷰포트 너비의 1%
+	  vh : viewport height : 뷰포트 높이의 1%
+	  vmin : 뷰 포트의 너비와 높이 중에서 가장 작은 값의 1%과 같음 
+	  vmax : 뷰 포트의 너비와 높이 중에서 가장 큰 값의 1%과 같음
+	  예) 전체 크기가 1000px * 800px 이면 1vw는 10px,  1vh는 8px가 된다.
+	   
+	 * 미디어 쿼리  : 사용자가 어떤 미디어를 사용하는 가에 따라 사이트의 형태가 바뀌도록 CSS를 작성하는 방법
+	               즉, 브라우저 화면의 크기에 따라 레이아웃이 변경 시키는 방법	      
+      <style> 태그 안에 작성  
+        @media [only|not] 미디어유형 [and 조건] * [and 조건]
+       only : 미디어 쿼리를 지원하지 않는 브라우저에서는 미디어 쿼리를 무시하고 실행하지 않는다.
+       not  : not 뒤에 오는 미디어유형은 지원하지 않는다.( not tv라고 하면 tv는 제외 시킨다.)  
+  -->
+  	<h1> 안녕하세요?</h1>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>트랜지션</title>
+<style type="text/css">
+	.mybox{
+		margin: 20px auto;
+		width: 100px;
+		height: 100px;
+		background-color: orange;
+		border: 1px solid #222;
+		/* 
+		transition-property: width, height, transform ;
+		transition-duration: 2s ;          
+		transition-timing-function : ease-in; 
+		*/
+		transition : all 2s ease-in;
+	}
+	.mybox:hover{
+		width: 200px;   /* 넓이는 2초 */
+		height: 300px;  /* 높이는 1초 */
+		background-color: aqua;
+		transform: rotate(270deg); /* 회전 */
+	}
+</style>
+</head>
+<body>
+	<!--
+		transition은 웹 요소의 배경색을 바꾸거나 도형의 테두리를 사각형ㅇ에서 원형으로 
+		변경하는 것 처럼 스타일 속성이 바뀌는 것을 말한다.
+		transition-property : 대상지정 : all | none | 속성이름
+		transition-duration : 시간(실행할 시간을 지정): 2s(2초)
+		transition-delay    : 시간(지연시간)    : 2s
+		transition-timing-function : 실행 형태
+		  - ease  : 처음에는 천천히 시작하고 점점 빨리지다가 마지막엔 천천히 끝탭니다.(기본값)
+		  - linear : 처음부터 끝까지 같은 속도
+		  - ease-in  : 느리게 시작
+		  - ease-out : 느리게 끝내기
+		  - ease-in-out : 느리게 시작하고 느리게 끝내기       
+	  -->
+	<div class="mybox"></div>
+</body>
+</html>

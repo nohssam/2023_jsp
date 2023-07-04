@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>콜백함수</title>
+<script type="text/javascript">
+	function send_go1() {
+		// 3초 후에 myfunc 함수를 호출 
+		// setTimeout(실행할 함수, 지연시간(밀리초)) => 내장 함수
+		// 밀리초 => 1000 : 1초
+		setTimeout(myfunc, 3000);
+	}
+	function send_go2() {
+		setTimeout(function() {
+			alert("경고메세지2");
+		}, 3000);
+	}
+	function send_go3() {
+		// 람다식
+		setTimeout(() => {
+			alert("경고메세지3");
+		}, 3000);
+	}
+	function send_go4() {
+		var cnt = 0 ;
+		// 반복실행 (1 초)
+		setInterval(() => {
+			cnt++;
+			document.write(cnt+"<p>Hello World</p>");
+		}, 1000);
+	}
+	function myfunc() {
+		alert("경고메세지1");
+	}
+</script>
+</head>
+<body>
+	<!-- 콜백함수 : 파라미터로 함수를 전달받아, 함수의 내부에서 인자로 받은 함수를 실행할수 있다.
+	 이때 인자로 받은 함수를 콜백함수라고 한다.
+	 사용이유 : 비동기 자바스크립트 코드를 작성할때 사용-->
+	<button onclick="send_go1()">눌러주세요</button>
+	<button onclick="send_go2()">눌러주세요</button>
+	<button onclick="send_go3()">눌러주세요</button>
+	<button onclick="send_go4()">눌러주세요</button>
+</body>
+</html>

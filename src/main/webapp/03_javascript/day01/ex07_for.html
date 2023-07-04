@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>for 문</title>
+<script type="text/javascript">
+	// 문법은 자바 문법과 같음
+	// 7 단 출력
+	for (var i = 1; i < 10; i++) {
+		document.write(" 7 * " + i + " = " + (7*i) + "<br>");
+	}	
+	document.write("<hr>");
+	
+	// 구구단 - 1
+	for (var i = 2; i < 10; i++) {
+		document.write( i + "단 <br>");
+		for (var j = 1; j < 10; j++) {
+			document.write( i +  " * " + j + " = " + (i*j) + "<br>");
+		}
+	}
+	document.write("<hr>");
+	
+	// 구구단 - 2
+	for (var i = 2; i < 10; i++) {
+		document.write( i + "단 <br>");
+		for (var j = 1; j < 10; j++) {
+			document.write( i +  " * " + j + " = " + (i*j) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+		}
+		document.write("<br>");
+	}
+	document.write("<hr>");
+	
+	// 구구단 - 3
+	for (var i = 1; i < 10; i++) {
+		for (var j = 2; j < 10; j++) {
+			document.write( j +  " * " + i + " = " + (i*j) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+		}
+		document.write("<br>");
+	}
+	
+	
+	
+</script>
+</head>
+<body>
+</body>
+</html>

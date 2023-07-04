@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function test1() {
+		// 특정 위치에 글자 삽입(태그 포함할수 있다.)
+		document.getElementById("demo1").innerHTML = "ICT 인재 개발원";
+	}
+	function test2() {
+		// 스타일 지정
+		document.getElementById("demo2").style.display = "none";
+	}
+	function test3() {
+		// 스타일 지정
+		document.getElementById("demo3").style.fontSize = "30px";
+	}
+	function test4() {
+		// demo4 에서 content 얻어서 소문자 만들기 
+		var k = document.getElementById("demo4").innerHTML.toLowerCase();
+		document.getElementById("demo4").innerHTML = k;		
+		document.getElementById("uname").value = k;
+	}
+</script>
+</head>
+<body>
+	<h2>id 선택자를 이용한 이벤트</h2>
+	<p id="demo1"></p>
+	<p id="demo2">Click One</p>
+	<p id="demo3">Click Two</p>
+	<p id="demo4">Click Three</p>
+	<hr>
+		이름 : <input type="text" id="uname" name="uname" onchange="test4()">
+	<hr>
+	
+	
+	<!-- demo1에 'ICT 인재 개발원' 글자 삽입   -->
+	<button onclick="test1()">눌러주세요</button>
+	
+	<!-- demo2에 내용이 화면에 보이지 않게  -->
+	<button onclick="test2()">눌러주세요</button>
+	
+	<!-- demo3의 글자가 30px로 만들자  -->
+	<button onclick="test3()">눌러주세요</button>
+	
+	<!-- demo4의 글자를  모두 소문자로 변경시키자  -->
+	<button onclick="test4()">눌러주세요</button>
+</body>
+</html>

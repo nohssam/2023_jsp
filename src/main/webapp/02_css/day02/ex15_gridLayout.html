@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{
+		box-sizing: border-box;
+	}
+	body{
+		width: 100vw;
+		height: 100vh;
+		margin: 0;
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+		grid-template-rows:100px auto 100px;
+	}
+	header, footer{
+		background-color: lightgray;
+		text-align: center;
+	}
+	section{
+		background-color: green;
+	}
+	aside{
+		background-color: purple;
+	}
+	.item{
+		grid-column-start:1;
+		grid-column-end:3;
+	}
+</style>
+</head>
+<body>
+	<header class="item"><h1>header</h1></header>
+	<section>
+		<article><h1>section 1</h1></article>
+	</section>
+	<aside><h1>aside</h1></aside>
+	<footer class="item"><h1>footer</h1></footer>
+</body>
+</html>

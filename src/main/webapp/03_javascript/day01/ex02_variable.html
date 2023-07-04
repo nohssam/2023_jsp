@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>변수</title>
+<script type="text/javascript">
+	// 변수 : 자료형을 지정하지 않는다.
+	//       모든 데이터를 저장할 수 있다. 
+	//       변수이름을 숫자로 시작 할 수 없다.
+	//       대소문자를 구별한다.(KOR, kor, Kor 모두 다른다.)
+	//       변수는 소문자로 시작, 상수는 모두 대문자
+	// ** 여러 문자 표기법 : 카멜표기법, 팟홀표기법
+	//     카멜 : myFirstVariable
+	//     팟홀 : my_first_variable
+	
+	// 변수 생성 
+	// var 변수이름 = 데이터(정수, 실수, boolean, char, string, null, function, class...)
+	var res = 1 ;
+	document.write("<h2>res=" + res + "</h2>");
+	
+	res = 3.14 ;
+	document.write("<h2>res=", res , "</h2>");
+	
+	res = true ;
+	document.write("<h2>res=", res , "</h2>");
+	
+	res = 'c' ;
+	document.write("<h2>res=", res , "</h2>");
+	
+	res = 'MyBoys' ;
+	document.write("<h2>res=", res , "</h2>");
+	
+	res = null ;
+	document.write("<h2>res=", res , "</h2>");
+	
+	// 선언하지 않아도 사용 가능 (권장은 안함)
+	res2 = "Hello JavaScript";
+	document.write("<h2>res2=", res2 , "</h2>");
+	
+	// 선어 후 데이터를 저장하지 않으면 undefinded(정의 되지 않았다.) 
+	var res3 ;
+	document.write("<h2>res3=", res3 , "</h2>");
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

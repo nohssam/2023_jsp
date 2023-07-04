@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>글꼴 관련 스타일</title>
+<style type="text/css">
+/*
+	글꼴     : font-fmaily ( 웹 포트을 사용하자.)
+	글자스타일 : font-style : normal(기본값) | italic(이탤릭) | oblique(이탤릭)
+	글자굵기  : font-weight : normal | bold(굵게) | bolder(원래보다 굵게) | lighter(원래보다 가늘게)
+	글자크기  : font-size
+	          W3C에서는 em 단위 권장 
+	          기본크기 : 16px = 1em = 12pt
+	          30px/16 = 1.87em
+	          40px/16 = 2.5em
+	단위 : 
+	 -- 절대
+	 - px(픽셀) : 모니터 1픽셀을 기준
+	 - pt(폰트) : 일반 문서에 사용되는 크기
+	 -- 상대
+	 - em :    W3C에서는 em 단위 권장 ,
+	 - rem : 문서의 시작부분에서 지정한 크기를 기준으로 비율을 지정
+	 
+	              
+*/
+ body{
+    font-size: 20px;
+ }
+ h1{
+ 	font-family: 바탕;
+ 	font-size: 3em;
+ }
+ 
+ .accent{
+ 	font-size: 150%;
+ 	font-weight: bold;
+ }
+ .italic{
+ 	font-style: oblique;
+ }
+</style>
+</head>
+<body>
+	<h1>레드향</h1>
+    <p>껍질에 붉은 빛이 돌아 <span class="accent">레드향</span>이라 불린다.</p>
+    <p>레드향은 한라봉과 귤을 교배한 것으로 <span class="italic">일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</span></p>
+    <p>비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.</p>
+</body>
+</html>

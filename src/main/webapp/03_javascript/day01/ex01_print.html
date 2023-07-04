@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>화면 출력(브라우저 출력)</title>
+<!--  헤더부분에 사용가능 -->
+<script type="text/javascript">
+	// 1. 자바스크립트을 이용해서 브라우저에 화면 출력하기
+	// - head에 있는 것이 먼저 실행된다.
+	// - body 부분은 순서대로 실행 된다.
+	
+	// document => 현재문서
+	document.write("Hello");
+	// 태그와 스타일을 사용할 수 있다.
+	document.write("<h3 style='color: red'> 안녕하세요 </h3>");
+	document.write('<h3 style="color: green"> 안녕하세요 </h3>');
+	
+	// 2. 콘솔창에 출력(크롬 f12=>개발자모드)
+	console.log("콘솔창 : 안녕하세요");
+	
+	// 3. 대화상자(alert(경고창), confirm(확인창), prompt(입력창))
+	alert("방가방가~~");
+	
+	// 4. innerHTML => 나중에 배움
+	//  현재 웹 페이지에 특정부분에 자바스크립트를 이용해서 데이터를 삽입하거나 추출할때 사용
+</script>
+</head>
+<body>
+	<script type="text/javascript">
+		document.write("Hi-1 ~~~~");
+	</script>
+	<h2 >Hello JavaScript</h2>
+	<!-- 바디 부부에 사용가능 -->
+	<script type="text/javascript">
+		document.write("Hi-2 ~~~~");
+	</script>
+</body>
+</html>

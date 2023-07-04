@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{
+		box-sizing: border-box;
+	}
+	body{
+		width: 100vw;
+		height: 100vw;
+		margin:0;
+		background-color: black;
+		padding: 10px;
+	}
+	.container{
+		display: grid;
+		grid-template-columns:1fr 1fr 1fr;
+		grid-auto-rows:150px;
+		grid-gap:10px;
+		/* 자리 지정 */
+		grid-template-areas:
+		'a a a'
+		'b c c'
+		'b d g'
+		'e f g'
+	}
+	.image{
+		width: 100%;
+		height: 100%;
+		object-fit:cover;
+	}
+	
+	/* 자리를 지정하기 위해 별도로 이름 지정  */
+	.image1{grid-area: a;}
+	.image2{grid-area: b;}
+	.image3{grid-area: c;}
+	.image4{grid-area: d;}
+	.image5{grid-area: e;}
+	.image6{grid-area: g;}
+	.image7{grid-area: f;}
+</style>
+</head>
+<body>
+<section class="container">
+      <img src="https://images.unsplash.com/photo-1661933021480-75b708d5648f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+        alt="img"  class="image image1">
+      <img
+        src="https://images.unsplash.com/photo-1661912267451-712c028d74a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+        alt="img" class="image image2">
+      <img
+        src="https://images.unsplash.com/photo-1661895581832-51c8e3538b4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+        alt="img" class="image image3">
+      <img
+        src="https://images.unsplash.com/photo-1661836890977-1cc392056094?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+        alt="img" class="image image4" >
+      <img
+        src="https://images.unsplash.com/photo-1661900980235-db5affe17d8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1567&q=80"
+        alt="img" class="image image5" >
+      <img
+        src="https://images.unsplash.com/photo-1661901060088-32dbfeb040df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+        alt="img"class="image image6" >
+      <img
+        src="https://images.unsplash.com/photo-1661890090656-6bf16bbdee4c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80"
+        alt="img" class="image image7" >
+    </section>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+  <p id="demo1">Hello World</p>
+  <p><span id="demo2">WelCome JavaScript</span></p>
+  <p id="demo3">서울시 마포구 신수동</p>
+  <hr>
+  
+  <script type="text/javascript">
+  	// html 요소 변경하기 
+  	// 내용(텍스트=content) 가져오거나 설정 :  innerHTML
+  	// 속성 가져오기 => getAttribute("속성명")
+  	// 속성 설정하기 => setAttribute("속성명", "값")
+  	// css를 이용해서 속성 설정하기 : style.속성명 = "값"
+  	document.getElementById("demo1").innerHTML = "<h2>KOREA SEOUL</h2>";
+  	document.getElementById("demo1").align = "center";
+  	document.getElementById("demo3").setAttribute("align","center");
+  	document.getElementById("demo1").style.color = "red";
+  	document.getElementById("demo3").style.background = "skyblue";
+  </script>
+</body>
+</html>

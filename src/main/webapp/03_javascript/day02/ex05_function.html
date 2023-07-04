@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>function() : 함수</title>
+<script type="text/javascript">
+    // 선언함수가 먼저 만들어지고 나중에 실행 된다.
+    test1();
+	function test1(){
+		document.write("Hi~~~<br>");
+	}
+	test1();
+	function test1(){
+		document.write("Hello!!!<br>");		
+	}
+	test1();
+	document.write("<hr>");
+</script>
+<script type="text/javascript">
+	// test1(); 호출가능
+	
+	// 익명 함수는 선언함수와 다르게 실행할때 만들어진다.
+	// test2(); 오류 발생 
+	var test2 = function() {
+		document.write("Hi~~~<br>");
+	}
+	test2();
+	var test2 = function() {
+		document.write("Hello!!!<br>");
+	}
+	test2();
+	document.write("<hr>");
+</script>
+<script type="text/javascript">
+	test3();
+	function test3() {
+		document.write("Hi^^ <br>");
+	}
+	test3();
+	var test3 = function() {
+		document.write("Hello^^ <br>");
+	}
+	test3();
+	document.write("<hr>");
+</script>
+<script type="text/javascript">
+	test4();
+	var test4 = function() {
+		document.write("Hello@@ <br>");
+	}
+	test4();
+	function test4() {
+		document.write("Hi@@ <br>");
+	}
+	test4();
+	document.write("<hr>");
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	fieldset {
+	width: 300px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+	<form action="/jsp/Ex09" method="post">
+		<fieldset>
+			<legend>배열 파라미터 넘기기</legend>
+			<p>
+				취미 : 
+				<input type="checkbox" name="hobby" value="운동" checked>운동
+				<input type="checkbox" name="hobby" value="게임">게임
+				<input type="checkbox" name="hobby" value="영화">영화
+				<input type="checkbox" name="hobby" value="독서">독서
+			</p>
+			<p> 웹 프로그래밍 : <br>
+				<select name="web" multiple size="5">
+					<option selected>HTML</option>
+					<option>CSS</option>
+					<option>JS</option>
+					<option>JSP</option>
+					<option>Spring</option>
+				</select>
+			</p>
+			<input type="submit" value="결과보기"> 
+		</fieldset>
+	</form>
+</body>
+</html>

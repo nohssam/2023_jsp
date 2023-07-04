@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>겔러리 만들기</title>
+<style type="text/css">
+	body{
+		margin: 0;
+		padding: 0;
+		background-color: #232323;
+		color: white;
+	}
+	div#wrap a{
+		color: white;
+	}
+	div#wrap img{
+		border: 0;
+	}
+	div#wrap{
+		width: 700px;
+		border: 1px solid white;
+		margin: 50px auto;
+	}
+	div#wrap>h1{
+		font: bold 35px;
+		margin: 50px;
+		text-align: center;
+	}
+	ul#carList{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	li.carBox{
+		width:170px;
+		border:1px solid white;
+		text-align:center;
+		padding-bottom:10px;
+		margin: 0 0 46px 46px ;
+		float: left;
+	}
+	li.carBox>span>a{
+		font: 12px;
+		text-decoration: none;
+	}
+	li.carBox>a{
+		display: block;
+		width: 160px;
+		height: 120px;
+		border: 5px solid #232323;
+	}
+	/* 적용된 float 해제 하라는 뜻*/
+	.end{
+		float: none;
+		clear: both;
+	}
+</style>
+</head>
+<body>
+<div id="wrap">
+		<h1>자동차 목록</h1>
+		<ul id="carList">
+			<li class="carBox">
+				<a href="#"><img src="../../images/Audi-R8.jpg"></a> 
+				<span><a href="#">Audi-R8</a></span>
+			</li>
+			<li class="carBox">
+				<a href="#"> 
+				<img src="../../images/Aston_Martin-One-77.jpg"></a>
+				<span><a href="#">Aston_Martin-One-77</a></span>
+			</li>
+			<li class="carBox">
+				<a href="#"><img src="../../images/Jaguar-XJ.jpg"></a> 
+				<span><a href="#">Jaguar-XJ</a></span>
+			</li>
+			<li class="carBox">
+				<a href="#"> <img src="../../images/BMW-Z4.jpg"></a>
+				 <span><a href="#">BMW-Z4</a></span>
+			</li>
+			<li class="carBox"><a href="#"> <img
+					src="../../images/Bentley-Continental_GTC.jpg">
+			</a> <span><a href="#">Bentley-GTC</a></span></li>
+			<li class="carBox"><a href="#"> <img
+					src="../../images/Hyundai-Genesis.jpg">
+			</a> <span><a href="#">Hyundai-Genesis</a></span></li>
+			<li class="carBox"><a href="#"> <img
+					src="../../images/Lamborghini-Reventon.jpg">
+			</a> <span><a href="#">Lamborghini-Reventon</a></span></li>
+			<li class="carBox"><a href="#"> <img
+					src="../../images/Ferrari-458_Italia.jpg">
+			</a> <span><a href="#">Ferrari-458_Italia</a></span></li>
+			<li class="end"></li>
+		</ul>
+	</div>
+</body>
+</html>

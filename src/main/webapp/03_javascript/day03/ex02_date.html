@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date 객체 : 내장 객체</title>
+<script type="text/javascript">
+  document.write("<h2>"); 	
+  document.write("오늘 날짜 : " + new Date() + "<br>");
+  document.write("특정 날짜 : " + new Date("2022-02-22") + "<br>");
+  
+  // 월을 -1을 해야 된다.(0-11)
+  document.write("특정 날짜 : " + new Date(2022,04-1,26) + "<br>");
+  document.write("특정 날짜 및 시간: " + new Date(2022,04-1,26,09,10) + "<br>");
+  document.write("<hr>");
+  
+  // .toDateString()는 보기 쉬운 날짜 형식으로 변경 
+  document.write("오늘 날짜 : " + new Date().toDateString() + "<br>");
+  document.write("특정 날짜 : " + new Date("2022-02-22").toDateString() + "<br>");
+  document.write("특정 날짜 : " + new Date(2022,04,26).toDateString() + "<br>");
+  document.write("특정 날짜 및 시간: " + new Date(2022,04-1,26,09,10).toDateString() + "<br>");
+  document.write("<hr>");
+  
+  // .toLocaleDateString() : 보기 쉬운 날짜 형식으로 변경 
+  // .toLocaleTimeString() : 보기 쉬운 시간 형식으로 변경 
+  // .toLocaleString() : 보기 쉬운 날짜/시간 형식으로 변환
+  document.write("오늘 날짜 : " + new Date().toLocaleDateString() + "<br>");
+  document.write("특정 날짜 및 시간: " + new Date(2022,04-1,26,09,10).toLocaleDateString() + "<br>");
+  
+  document.write("오늘 날짜 : " + new Date().toLocaleTimeString() + "<br>");
+  document.write("특정 날짜 및 시간: " + new Date(2022,04-1,26,09,10).toLocaleTimeString() + "<br>");
+  
+  document.write("오늘 날짜 : " + new Date().toLocaleString() + "<br>");
+  document.write("특정 날짜 및 시간: " + new Date(2022,04-1,26,09,10).toLocaleString() + "<br>");
+  
+  document.write("날짜(년도) : "+ new Date().getFullYear() + "<br>" );
+  document.write("날짜(월) : "+ (new Date().getMonth()+1) + "<br>" );
+  document.write("날짜(일) : "+ new Date().getDate() + "<br>" );
+  document.write("날짜(시) : "+ new Date().getHours() + "<br>" );
+  document.write("날짜(분) : "+ new Date().getMinutes() + "<br>" );
+  document.write("날짜(초) : "+ new Date().getSeconds() + "<br>" );
+  document.write("날짜(요일) : "+ new Date().getDay() + "<br>" );  // 0 => 일표일
+  
+  document.write("</h2>");
+</script>
+</head>
+<body>
+
+</body>
+</html>

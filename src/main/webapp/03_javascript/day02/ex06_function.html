@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>function() : 함수</title>
+<script type="text/javascript">
+	
+	// 리턴이 없는 함수
+	function add(a,b) {
+		document.write("결과 : " + (a+b) + "<br>")
+	}
+	var result;
+	function sub(a,b) {
+		result = a-b;
+	}
+	
+	// 리턴이 있는 함수
+	function mul(a,b){
+		return a*b;
+	}
+	
+	function mul2(a,b){
+		var res = a*b;
+		return res;
+	}
+</script>
+</head>
+<body>
+	<h2> 자바스크립트 함수 연습</h2>
+	<script type="text/javascript">
+		// 리턴이 없는 함수 호출
+		add(7,5);
+		sub(7,2);
+		document.write("결과 : " + result);
+		document.write("<hr>");
+		
+		// 리턴이 있는 함수 호출 
+		var k = mul(7,5);
+		document.write("결과-1 : " + k);
+		document.write("<hr>");
+		
+		var k2 = mul2(7,5);
+		document.write("결과-2 : " + k2);
+		
+	</script>
+</body>
+</html>

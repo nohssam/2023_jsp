@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>선택자</title>
+<style type="text/css">
+	*{
+      background-color: green;
+      margin: 0;
+	}
+	.bgcolor{
+		background-color: red;
+	}
+	
+	#bgcolor2{
+		background-color: blue;
+	}
+	p{
+		color: white;
+		font-weight: bold;  /*굵게*/
+		font-style: italic; /*기울임*/
+		font-size: 28px; 
+	}
+</style>
+</head>
+<body>
+<!-- 
+	css문법 : 선택자(selector){ 속성(property) : 값;속성(property) : 값....);
+	
+	- 전체 선택자 : *
+	- 태그 선택자 = 요소 선택자 = 타임 선택자: 해당 태그
+	- 클래스 선택자 : .(점) 여러개 선택이 가능 (클래스 속성을 가진 태그를 선택)
+	- 아이디 선택자 : #(샵) 하나만 선택할 때 사용 (id 속성을 가진 태그를 선택)
+	- 자식 선택자 : 부모선택자 > 자식선택자 
+	- 자손 선택자 : 부모선택자  자식선택자
+	- 속성 선택자 : 선택자[속성=값] => 해당 속성과 일치하는 태그를 선택
+	-            선택자[속성^=값] => 해당 속성이 ~로 시작하는 태그 선택
+	-            선택자[속성*=값] => 해당 속성이 ~을 포함하는 태그 선택 
+	-            선택자[속성&=값] => 해당 속성이 ~로 끝나는 태그 선택
+	- 구조 선택자 : 선택자:first
+	-            선택자:last
+	-            선택자:even
+	-            선택자:odd
+	
+	** 우선 순위
+	- **사용자 스타일 > 제작자 스타일 > 브라우저 스타일
+	- 인라인 > id > 클래스 > 태그 > 전체
+ -->
+  <img alt="" src="../../images/workplace.jpg">
+  <h1> CSS 연습 </h1>
+  <p> CSS 선택자 연습</p>
+  <p class="bgcolor"> CSS 선택자 연습</p>
+  <p style="background-color: orange" id="bgcolor2"> CSS 선택자 연습</p>
+  <p  class="bgcolor"> CSS 선택자 연습</p>
+  <p  class="bgcolor" id="bgcolor2"> CSS 선택자 연습</p>
+  
+</body>
+</html>

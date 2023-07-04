@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>function() : 함수</title>
+<script type="text/javascript">
+	function test1() {
+		document.write("선언함수");
+	}
+	var msg = function() {
+		document.write("익명함수");
+	}
+	
+	// 함수 호출
+	test1();
+	document.write("<hr>");
+	// 반응없음
+	msg;
+	document.write("<hr>");
+	document.write(msg);
+	document.write("<hr>");
+	msg();
+</script>
+</head>
+<body>
+</body>
+</html>

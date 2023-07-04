@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.container{
+		width: 960px;
+		margin: 0 auto;
+	}
+	/* 선 */
+	.navi{
+		width: 960px;
+		height: 60px;
+		padding-bottom:10px;
+		border-bottom: 2px solid #ccc; 
+	}
+	/* 메뉴 */
+	.navi ul{
+		list-style-type: none;
+		padding-top: 10px;
+		padding-bottom: 5px;
+	}
+	.navi ul li{
+		display: inline-block;
+		width: 150px;
+		padding: 10px;
+	}
+	.navi a:link, .navi a:visited{
+		text-decoration:none;
+		font-size: 16px;
+		padding: 10px;
+		color: black;
+		font-weight: bold;
+	}
+	.navi a:hover, .navi a:focus{
+		background-color: #222;
+		color: white;
+	}
+	.navi a:active{
+		background: red;
+	}
+	/* 위 정보는 ex12_pseudo.html 과 같다.*/
+	
+	#signup{
+		background-color: white;
+		border: 1px solid #222;
+		border-radius: 5px;
+		padding: 20px;
+		width: 400px;
+		margin: 30px auto;
+	}
+	#signup fieldset{
+		border : 1px solid #222;
+		margin-bottom: 30px;
+	}
+	#signup legend{
+		font-size: 16px;
+		font-weight: bold;
+		padding-left: 5px;
+		padding-bottom: 10px;
+		margin-left: 120px;
+	}
+	
+	#signup ul li{
+		list-style-type: none;
+		line-height: 30px;
+		padding: 5px;
+	}
+	/* 라디오 버튼 제외 : fieldset 안에 첫번째 타입이 label */
+	#signup fieldset:first-of-type label{
+		float: left;
+		width: 100px;
+		font-size: 13px;
+	}
+	
+	/* 라디오이 선택 되면  */
+	#signup input:checked + label{
+		color: red;
+		font-weight: bold;
+	}
+	#signup input[type=text]:hover, input[type=tel]:hover{
+		border: 1px solid red;
+		padding: 5px;
+	}
+	#signup button{
+     	border: 1px solid #222;
+     	border-radius: 20px;
+     	font-size: 16px;
+     	display:block;
+     	margin: auto;
+     	padding: 7px 25px;
+     
+	}
+	
+	
+</style>
+</head>
+<body>
+<div class="container">
+    <nav class="navi">
+      <ul>
+        <li><a href="ex12_pseudo.html#intro">이용 안내</a></li>
+        <li><a href="ex12_pseudo.html#room">객실 소개</a></li>
+        <li><a href="ex12_pseudo.html#reservation">예약 방법 및 요금</a></li>
+        <li><a href="ex13_pseudo">예약하기</a></li>
+      </ul>
+    </nav>
+
+    <form id="signup">
+      <fieldset>
+        <legend>개인 정보</legend>
+        <ul>
+          <li>
+            <label for="fullname">이름</label>
+            <input id="fullname" name="fullname" type="text" required>
+          </li>
+          <li>
+            <label for="tel">연락처</label>
+            <input id="tel" name="tel" type="tel">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>객실 형태</legend>
+        <ul>
+          <li>
+            <input type="radio" name="room" id="basic">
+            <label for="basic">기본형(최대 2인)</label>
+          <li>
+          <li>
+            <input type="radio" name="room" id="family">
+            <label for="family">가족형(최대 8인)</label>
+          </li>
+        </ul>
+      </fieldset>
+      <button type="submit"> 제출 </button> 
+    </form>
+  </div>
+</body>
+</html>

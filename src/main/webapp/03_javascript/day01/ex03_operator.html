@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>연산자</title>
+<script type="text/javascript">
+	// 산술연산자 (+,-,*,/,%)
+	var s1 = 7 ;
+	var s2 = 3 ;
+	document.write("<h2>");
+	document.write("<p> 산술연산자 </p>");
+	document.write(s1 + "+" + s2 +"=" + (s1+s2)+"<br>");
+	document.write(s1 + "-" + s2 +"=" + (s1-s2)+"<br>");
+	document.write(s1 + "*" + s2 +"=" + (s1*s2)+"<br>");
+	document.write(s1 + "/" + s2 +"=" + (s1/s2)+"<br>");
+	document.write(s1 + "%" + s2 +"=" + (s1%s2)+"<br>");
+	document.write("</h2>");
+	document.write("<hr>");
+	
+	// 관계연사자 ( >, >=, <, <=, ==, != : 결과는 항상 boolean형, 주로 조건식에 사용된다.)
+	document.write("<h2>");
+	document.write("<p> 관계연산자 </p>");
+	document.write(s1 + ">" + s2 +"=" + (s1>s2)+"<br>");
+	document.write(s1 + ">=" + s2 +"=" + (s1>=s2)+"<br>");
+	document.write(s1 + "<" + s2 +"=" + (s1<s2)+"<br>");
+	document.write(s1 + "<=" + s2 +"=" + (s1<=s2)+"<br>");
+	document.write(s1 + "==" + s2 +"=" + (s1==s2)+"<br>");
+	document.write(s1 + "!=" + s2 +"=" + (s1!=s2)+"<br>");
+	
+	document.write("<p> ***** 관계연산자 주의 사항 ***** </p>");
+	var k1 = 1000;
+	var k2 = "1000";
+	document.write(k1 + "==" + k2 +"=" + (k1==k2)+"<br>");
+	
+	var d1 = true;
+	var d2 = 1 ;
+	document.write(d1 + "==" + d2 +"=" + (d1==d2)+"<br>");
+	
+	var d3 = false;
+	var d4 = 0 ;
+	document.write(d3 + "==" + d4 +"=" + (d3==d4)+"<br>");
+	
+	// 해결 : === 는 자료형과 데이터 모두가 일치해야만 true
+	document.write("<p> ***** 관계연산자 주의 사항 해결 ***** </p>");
+	document.write(k1 + "===" + k2 +"=" + (k1===k2)+"<br>");
+	document.write(d1 + "===" + d2 +"=" + (d1===d2)+"<br>");
+	document.write(d3 + "===" + d4 +"=" + (d3===d4)+"<br>");
+	document.write("</h2>");
+	document.write("<hr>");
+	
+	// 논리연산자 ( &&, ||, !)
+	// && (논리곱) : 주어진 조건들이 모두 참일 때만 결과가 참
+	// || (논리합) : 주어진 조건들 중 하나라도 참이면 결과가 참
+	// !  (논리부정) : 참을 거짓으로 , 거짓을 참으로 변경
+	s1 = true;
+	s2 = false;
+	document.write("<h2>");
+	document.write("<p> 논리연산자 </p>");
+	document.write(s1 + " && " + s1 +" = " + (s1 && s1)+"<br>");
+	document.write(s1 + " && " + s2 +" = " + (s1 && s2)+"<br>");
+	document.write(s2 + " && " + s1 +" = " + (s2 && s1)+"<br>");
+	document.write(s2 + " && " + s2 +" = " + (s2 && s2)+"<br>");
+	document.write("<hr>");
+	
+	document.write(s1 + " || " + s1 +" = " + (s1 || s1)+"<br>");
+	document.write(s1 + " || " + s2 +" = " + (s1 || s2)+"<br>");
+	document.write(s2 + " || " + s1 +" = " + (s2 || s1)+"<br>");
+	document.write(s2 + " || " + s2 +" = " + (s2 || s2)+"<br>");
+	document.write("</h2>");
+	
+	// 증감연산자(++변수, --변수, 변수++, 변수--)
+	// ++ 변수 : 현재 변수값에 1을 더한 후 현재 수식을 사용한다.
+	// 변수 ++ : 현재 변수값으로 현재 수식을 사용하고 나중에 변수값을 1증가 시킨디ㅏ.
+	s1 = 10 ;
+	s2 = 10 ;
+	document.write("<h2>");
+	document.write("<p> 증감연산자 </p>");
+	document.write("s1 = "+ ++s1 +"<br>");
+	document.write("s2 = "+ s2++ +"<br>");
+	document.write("s1 = "+ s1 +"<br>");
+	document.write("s2 = "+ s1 +"<br>");
+	document.write("</h2>");
+	
+	// 삼항연산자 (결과 = 조건식 ? 참일때 : 거짓일때)
+	// 자바에서는 결과, 참일때 결과, 거짓일때 결과 모두 같은 자료형이야만 한다.
+	// 자바스크립트는 자료형과 상관없이 모두 저장 가능
+	document.write("<h2>");
+	document.write("삼항연산자");
+	s1 = 75 ;
+	
+	// s1 이 60이상이면 합격 , 아니면 불합격
+	var result = (s1>=60) ? "합격" : "불합격"  ;
+	document.write("<p> 결과 : " + result + "</p>");
+	
+	s1 = 60;
+	// 조건의 결과가 참일때와 거짓일때 자료형이 다르다.
+	result = (s1>=60) ? 100 : "불합격"  ;
+	document.write("<p> 결과 : " + result + "</p>")
+	document.write("</h2>");
+	
+	// 문자열과 +연산 : 자바처럼 문자열이 된다.(+ 가 문자연결자 이다.)
+	s1 = 70;
+	s2 = "70";
+	document.write("<h2>");
+	document.write("결과 : " + (s1+20)+"<br>");
+	document.write("결과 : " + (s2+20)+"<br>");
+	document.write("</h2>");
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

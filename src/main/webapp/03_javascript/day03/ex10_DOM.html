@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#myBox{
+		background-color: yellow;
+	}
+</style>
+</head>
+<body>
+	<div id="myBox">
+		<p id="p1"> 이것은 DOM 연습 입니다. @@</p>
+		<p id="p2"> 이것은 DOM 연습 입니다. ^^</p>
+	</div>
+	<script type="text/javascript">
+		// html 요소 추가 및 삭제 
+		// document.createElement(element) : element 태그생성
+		// document.createdTextNode(text)  : text 생성
+		// document.appendChild(element)   : 자식요소 추가 
+		// .append(element)                : 요소 추가 
+		// document.removeChild(element)   : 자식요소 삭제
+		// .remove(element)                : 요소 삭제
+		// insertBefore(요소1, 요소2)        : 요소1이 요소2 앞에 삽입
+		var p = document.createElement("p"); // p 태그 생성
+		var p_txt = document.createTextNode("이것은 DOM 연습입니다. **");
+		
+		// 생성된 글자가 새로 만든 p태그안에 들어가게 하자.
+		p.appendChild(p_txt);
+		
+		var div = document.getElementById("myBox");
+		div.appendChild(p);
+		
+		var p2 = document.createElement("p"); 
+		var p2_txt = document.createTextNode("이것은 DOM 연습입니다. &&");
+		p2.appendChild(p2_txt);
+		
+		div.insertBefore(p2,p);
+		
+		// 삭제 
+		var k = document.getElementById("p1");
+		 k.remove();
+		 
+		 var k2 = document.getElementById("p2");
+		 div.removeChild(k2);
+	</script>
+</body>
+</html>
+
+
+

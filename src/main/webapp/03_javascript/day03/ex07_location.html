@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function send_go() {
+		location.href = "ex02_date.html";
+	}
+</script>
+</head>
+<body>
+	<h2>location 객체</h2>
+	<div id="display">
+		<script type="text/javascript">
+			document.write("<p><b>location.href : </b>" + location.href +"</p>");
+			document.write("<p><b>location.host : </b>" + location.host +"</p>");
+			document.write("<p><b>location.protocol : </b>" + location.protocol +"</p>");
+		</script>
+	</div>
+	<button onclick="location.replace('https://www.naver.com')">네이버 홈으로 이동</button>
+	<button onclick="send_go()">문제1 이동</button>
+</body>
+</html>

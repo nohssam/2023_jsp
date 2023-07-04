@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>switch</title>
+<script type="text/javascript">
+	// 자바문법과 같음
+	// 변수 k1이 a, A 이면 아프리카, b, B이면 브라질,
+	// c, C 이면 캐나다 나머지는 대한민국
+	var k1 = "ssc";
+	var res ;
+	switch (k1) {
+		case "a":
+		case "A": res = "아프리카"; break;
+		case "b":
+		case "B": res = "브라질"; break;
+		case "c":
+		case "C": res = "캐나다"; break;
+		default : res = "대한민국" ; break;
+	}
+	document.write("<h2>결과 : " + res + "</h2>");
+</script>
+</head>
+<body>
+</body>
+</html>
