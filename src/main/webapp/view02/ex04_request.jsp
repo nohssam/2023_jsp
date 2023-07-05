@@ -5,6 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>내장 객체 : request</title>
+<style type="text/css">
+	body{
+		background-color: pink;
+	}
+</style>
 </head>
 <body>
 <%--

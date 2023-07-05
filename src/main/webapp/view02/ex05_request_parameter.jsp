@@ -12,7 +12,7 @@
 </style>
 </head>
 <body>
-	<form action="ex05_result.jsp" method="get">
+	<form action="ex05_result.jsp" method="post">
 		<fieldset>
 			<legend>개인정보입력</legend>
 			<p>이름 : <input type="text" name="name" required></p>

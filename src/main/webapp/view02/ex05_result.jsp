@@ -12,6 +12,11 @@
     
     // 같은 이름이 여러개 넘어오면 배열처리 (checkbox, select 속성이 multiple)
     String[] hobby = request.getParameterValues("hobby");
+    
+    pageContext.setAttribute("name", request.getParameter("name"));
+    pageContext.setAttribute("age", request.getParameter("age"));
+    pageContext.setAttribute("gender", request.getParameter("gender"));
+    pageContext.setAttribute("hobby", request.getParameterValues("hobby"));
 %>    
 <!DOCTYPE html>
 <html>
@@ -33,6 +38,15 @@
 			      	}
 			      %>
 			</li>
+		</ul>
+	</h3>
+	<hr>
+	<h3>
+		<ul>
+			<li>이름 : ${name}</li>
+			<li>나이 : ${age}</li>
+			<li>성별 : ${gender}</li>
+			<li>취미 : ${hobby[0]} ${hobby[1]} ${hobby[2]} ${hobby[3]}	</li>
 		</ul>
 	</h3>
 </body>
