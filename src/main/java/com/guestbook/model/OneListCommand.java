@@ -16,6 +16,6 @@ public class OneListCommand implements Command{
 			// 저장 
 		     request.setAttribute("vo", vo);
 		
-			return "guestbook/onelist.jsp";
+			return "06_guestbook/onelist.jsp";
 		}	
 }

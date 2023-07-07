@@ -52,7 +52,7 @@ public class UpDownCommand {
 			
 		} catch (Exception e) {
 		}
-		return "fileUpDown/result.jsp";
+		return "07_fileUpDown/result.jsp";
 	}
 }
 

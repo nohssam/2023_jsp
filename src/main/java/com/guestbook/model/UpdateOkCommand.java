@@ -23,6 +23,6 @@ public class UpdateOkCommand implements Command{
 		// 업데이트 성공 후 다시 onelist로 가기 때문에 idx로 정보를 다시 가져와야 한다.
 		VO vo = DAO.getOneList(idx);
 		request.setAttribute("vo", vo);
-		return "guestbook/onelist.jsp";
+		return "06_guestbook/onelist.jsp";
 	}
 }

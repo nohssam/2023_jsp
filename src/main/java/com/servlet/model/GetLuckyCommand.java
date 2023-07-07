@@ -14,6 +14,6 @@ public class GetLuckyCommand implements Command{
 	 
 	 
 	 // 결과를 보여줄 페이지 지정 
-	return "view01/result02.jsp";
+	return "04_servlet/result02.jsp";
   }
 }

@@ -15,6 +15,6 @@ public class UpdateCommand implements Command{
 		VO vo = DAO.getOneList(idx);
 		
 		request.setAttribute("vo", vo);
-		return "guestbook/update.jsp";
+		return "06_guestbook/update.jsp";
 	}
 }

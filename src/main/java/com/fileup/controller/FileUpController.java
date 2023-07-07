@@ -23,8 +23,7 @@ public class FileUpController extends HttpServlet {
 		response.setContentType("text/html; charset=utf-8");
 		PrintWriter out = response.getWriter();
 		String cmd = request.getParameter("cmd");
-		//System.out.println(cmd);
-		
+			
 		UpDownCommand comm = new UpDownCommand();
 		String path = comm.exec(request, response);
 		request.getRequestDispatcher(path).forward(request, response);

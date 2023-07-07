@@ -20,6 +20,6 @@ public class GetTodayCommand implements Command{
 		request.setAttribute("day", day);
 		
 	    // 결과를 보여줄 페이지 지정
-		return "view01/result01.jsp";
+		return "04_servlet/result01.jsp";
 	}
 }

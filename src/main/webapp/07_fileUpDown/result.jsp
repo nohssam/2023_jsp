@@ -17,7 +17,8 @@
 		<li>마지막수정날짜 : ${f_last }</li>
 		<li>마지막수정날짜 : ${f_last2}</li>
 		<li><img src="upload/${f_name2}"> </li>
-		<li>다운로드 : <a href="fileUpDown/down.jsp?path=upload&f_name=${f_name2}">${f_name2}</a></li>		
+		<li>다운로드 : <a href="07_fileUpDown/down.jsp?path=upload&f_name=${f_name2}">${f_name2}</a></li>		
+		<li>다운로드 : <a href="/jsp/FileDownController?path=upload&f_name=${f_name2}">${f_name2}</a></li>
 	</h3>
 </body>
 </html>

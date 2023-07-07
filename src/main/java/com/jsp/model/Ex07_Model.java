@@ -23,6 +23,6 @@ public class Ex07_Model implements Command{
 	
 		
 		// 결과보여줄페이지
-		return "view02/ex07_request_result.jsp";
+		return "05_jsp/ex07_request_result.jsp";
 	}
 }

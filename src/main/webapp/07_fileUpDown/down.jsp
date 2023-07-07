@@ -36,6 +36,7 @@
     		bos.write(b);
     		bos.flush();
     	}
+    
     	out.clear();
     	out = pageContext.pushBody();
     }catch(Exception e){

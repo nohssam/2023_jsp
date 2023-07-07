@@ -20,6 +20,6 @@ public class ListCommand implements Command{
 		request.setAttribute("list", list);
 		
 		// 결과 보여줄 페이지 
-		return "guestbook/list.jsp";
+		return "06_guestbook/list.jsp";
 	}
 }

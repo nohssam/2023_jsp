@@ -27,6 +27,6 @@ public class GetCalcCommand implements Command{
 		
 		
 		 // 결과를 보여줄 페이지 지정 
-		return "view01/result03.jsp";
+		return "04_servlet/result03.jsp";
 	}
 }

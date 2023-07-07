@@ -17,6 +17,6 @@ public class Ex10_3_Model implements Command{
 		// 방법2_ 리스트 속성만 삭제
 		// ss.removeAttribute("list");
 		
-		return "view02/ex10_session_cart.jsp";
+		return "05_jsp/ex10_session_cart.jsp";
 	}
 }

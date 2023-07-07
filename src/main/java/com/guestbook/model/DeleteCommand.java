@@ -14,6 +14,6 @@ public class DeleteCommand implements Command{
 		VO vo = DAO.getOneList(idx);
 		request.setAttribute("vo", vo);
 		
-		return "guestbook/delete.jsp";
+		return "06_guestbook/delete.jsp";
 	}
 }

@@ -26,6 +26,6 @@ public class Ex10_1_Model implements Command{
 		list.add(fruits);
 		
 		
-		return "view02/ex10_session_cart.jsp";
+		return "05_jsp/ex10_session_cart.jsp";
 	}
 }
