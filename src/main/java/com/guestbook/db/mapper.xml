@@ -18,6 +18,15 @@
 	<select id="onelist" parameterType="String" resultType="com.guestbook.db.VO">
 	   select * from guestbook where idx = #{idx}
 	</select>
+	
+	<update id="update" parameterType="com.guestbook.db.VO">
+		update guestbook set name=#{name}, subject=#{subject},
+		email=#{email}, content=#{content} where idx=#{idx}
+	</update>
+	
+	<delete id="delete" parameterType="String">
+		delete from guestbook where idx = #{idx}
+	</delete>
 </mapper>
 
 
