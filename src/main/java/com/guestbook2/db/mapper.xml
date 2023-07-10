@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="guestbook2">
+	<select id="list" resultType="com.guestbook2.db.VO">
+		select * from guestbook2 order by idx
+	</select>
+	<insert id="insert" parameterType="com.guestbook2.db.VO">
+		insert into guestbook2(idx, name, subject, content, email, pwd, f_name, regdate)
+		values(guestbook2_seq.nextval, #{name}, #{subject}, #{content}, 
+		#{email}, #{pwd}, #{f_name}, sysdate)
+	</insert>
+	<select id="onelist" parameterType="String" resultType="com.guestbook2.db.VO">
+		select * from guestbook2 where idx = #{idx}
+	</select>
+	<update id="update" parameterType="com.guestbook2.db.VO">
+		update guestbook2 
+		set name=#{name}, subject=#{subject}, email=#{email},
+		content=#{content}, f_name=#{f_name}
+		where idx = #{idx}
+	</update>
+	<delete id="delete" parameterType="String">
+		delete from guestbook2 where idx=#{idx}
+	</delete>
+</mapper>
+
+
+
+
+
+
+
+
+
